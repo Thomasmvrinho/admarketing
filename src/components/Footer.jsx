@@ -15,7 +15,7 @@ const footerLinks = [
 export default function Footer() {
   const [logoErr, setLogoErr] = useState(false)
   return (
-    <footer className="pt-12 pb-6" style={{ background: '#0F172A' }}>
+    <footer className="pt-12 pb-6" style={{ background: '#1E2A3A' }}>
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex flex-col md:flex-row items-center justify-between gap-8 mb-10">
           <a href="#home">
@@ -24,7 +24,7 @@ export default function Footer() {
                 onError={() => setLogoErr(true)} />
             ) : (
               <span className="font-grotesk font-bold text-xl">
-                <span style={{ color: '#C9A227' }}>AD</span>
+                <span style={{ color: '#2E86DE' }}>AD</span>
                 <span className="text-white">MARKETING</span>
               </span>
             )}
@@ -49,7 +49,7 @@ export default function Footer() {
           </div>
         </div>
         <div className="h-px mb-6"
-          style={{ background: 'linear-gradient(90deg, transparent, rgba(201,162,39,0.6), transparent)' }} />
+          style={{ background: 'linear-gradient(90deg, transparent, rgba(46,134,222,0.6), transparent)' }} />
         <div className="flex flex-col sm:flex-row items-center justify-between gap-2">
           <span className="font-inter text-white/25 text-sm">© 2026 ADMARKETING — Tous droits réservés</span>
           <span className="font-inter text-white/25 text-sm">Fait avec passion 🖤🏆</span>

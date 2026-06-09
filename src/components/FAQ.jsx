@@ -39,7 +39,7 @@ export default function FAQ() {
           viewport={{ once: true }} transition={{ duration: 0.6 }}>
           <span className="font-syne font-semibold text-xs uppercase tracking-widest text-gold mb-3 block">FAQ</span>
           <h2 className="font-grotesk font-bold text-3xl md:text-4xl text-ink mb-4">Questions fréquentes</h2>
-          <div className="mx-auto w-20 h-1 rounded-full" style={{ background: 'linear-gradient(90deg, #C9A227, #D8B64A)' }} />
+          <div className="mx-auto w-20 h-1 rounded-full" style={{ background: 'linear-gradient(90deg, #2E86DE, #4A9DE8)' }} />
         </motion.div>
         <div className="space-y-3">
           {faqs.map((faq, i) => (
@@ -51,7 +51,7 @@ export default function FAQ() {
                 onClick={() => setOpen(open === i ? null : i)} aria-expanded={open === i}>
                 <span className="font-grotesk font-semibold text-ink pr-4 group-hover:text-gold transition-colors">{faq.q}</span>
                 <motion.div animate={{ rotate: open === i ? 180 : 0 }} transition={{ duration: 0.3 }}
-                  className="flex-shrink-0" style={{ color: open === i ? '#C9A227' : '#0F172A80' }}>
+                  className="flex-shrink-0" style={{ color: open === i ? '#2E86DE' : '#1E2A3A80' }}>
                   <ChevronDown size={20} />
                 </motion.div>
               </button>
@@ -60,7 +60,7 @@ export default function FAQ() {
                   <motion.div initial={{ height: 0, opacity: 0 }} animate={{ height: 'auto', opacity: 1 }}
                     exit={{ height: 0, opacity: 0 }} transition={{ duration: 0.3 }} style={{ overflow: 'hidden' }}>
                     <div className="px-6 pb-6">
-                      <div className="w-full h-px mb-4" style={{ background: 'linear-gradient(90deg, #C9A22722, #D8B64A22)' }} />
+                      <div className="w-full h-px mb-4" style={{ background: 'linear-gradient(90deg, #2E86DE22, #4A9DE822)' }} />
                       <p className="font-inter text-ink/55 text-sm leading-relaxed">{faq.a}</p>
                     </div>
                   </motion.div>

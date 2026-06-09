@@ -32,7 +32,7 @@ export default function Stats() {
   return (
     <section className="py-20 bg-ink relative overflow-hidden">
       <div className="absolute inset-0 opacity-20"
-        style={{ backgroundImage: 'radial-gradient(circle at 20% 50%, rgba(201,162,39,0.15) 0%, transparent 50%), radial-gradient(circle at 80% 50%, rgba(201,162,39,0.1) 0%, transparent 50%)' }} />
+        style={{ backgroundImage: 'radial-gradient(circle at 20% 50%, rgba(46,134,222,0.15) 0%, transparent 50%), radial-gradient(circle at 80% 50%, rgba(74,157,232,0.1) 0%, transparent 50%)' }} />
       <div className="relative max-w-7xl mx-auto px-6">
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
           {stats.map((stat, i) => (
@@ -40,7 +40,7 @@ export default function Stats() {
               initial={{ opacity: 0, y: 28 }} whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }} transition={{ duration: 0.55, delay: i * 0.13 }}>
               <div className="font-grotesk font-bold text-5xl md:text-6xl mb-2"
-                style={{ background: 'linear-gradient(135deg, #C9A227, #D8B64A)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>
+                style={{ background: 'linear-gradient(135deg, #2E86DE, #4A9DE8)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>
                 <AnimatedCounter to={stat.to} suffix={stat.suffix} />
               </div>
               <div className="font-inter text-white/45 font-medium text-sm uppercase tracking-wide">{stat.label}</div>

@@ -39,16 +39,15 @@ export default function Contact() {
           <span className="font-syne font-semibold text-xs uppercase tracking-widest text-gold mb-3 block">Contact</span>
           <h2 className="font-grotesk font-bold text-3xl md:text-4xl text-white mb-3">Parlons de votre projet</h2>
           <p className="font-inter text-white/45 max-w-md mx-auto text-sm">Premier échange gratuit et sans engagement. Nous revenons vers vous sous 24h.</p>
-          <div className="mx-auto mt-5 w-20 h-1 rounded-full" style={{ background: 'linear-gradient(90deg, #C9A227, #D8B64A)' }} />
+          <div className="mx-auto mt-5 w-20 h-1 rounded-full" style={{ background: 'linear-gradient(90deg, #2E86DE, #4A9DE8)' }} />
         </motion.div>
-
         <div className="grid lg:grid-cols-2 gap-14">
           <motion.div initial={{ opacity: 0, x: -35 }} whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }} transition={{ duration: 0.6 }}>
             {sent ? (
               <motion.div initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }}
                 className="h-full flex flex-col items-center justify-center text-center gap-4 rounded-2xl py-16"
-                style={{ border: '1px solid rgba(201,162,39,0.3)', background: 'rgba(201,162,39,0.05)' }}>
+                style={{ border: '1px solid rgba(46,134,222,0.3)', background: 'rgba(46,134,222,0.05)' }}>
                 <div className="text-5xl">🤝</div>
                 <h3 className="font-grotesk font-bold text-white text-xl">Message reçu !</h3>
                 <p className="font-inter text-white/50 text-sm max-w-xs">Nous revenons vers vous sous 24h pour discuter de votre projet.</p>
@@ -60,19 +59,19 @@ export default function Contact() {
                 <input type="tel" name="phone" value={form.phone} onChange={handleChange} placeholder="Téléphone (optionnel)" className={inputClass} />
                 <select name="type" value={form.type} onChange={handleChange} className={inputClass}
                   style={{ color: form.type ? 'white' : 'rgba(255,255,255,0.3)', appearance: 'none' }}>
-                  <option value="" style={{ background: '#0F172A', color: '#888' }}>Type de besoin</option>
-                  <option value="apport" style={{ background: '#0F172A', color: 'white' }}>Apport d'Affaires</option>
-                  <option value="formation" style={{ background: '#0F172A', color: 'white' }}>Formation</option>
-                  <option value="developpement" style={{ background: '#0F172A', color: 'white' }}>Développement Commercial</option>
-                  <option value="autre" style={{ background: '#0F172A', color: 'white' }}>Autre</option>
+                  <option value="" style={{ background: '#1E2A3A', color: '#888' }}>Type de besoin</option>
+                  <option value="apport" style={{ background: '#1E2A3A', color: 'white' }}>Apport d'Affaires</option>
+                  <option value="formation" style={{ background: '#1E2A3A', color: 'white' }}>Formation</option>
+                  <option value="developpement" style={{ background: '#1E2A3A', color: 'white' }}>Développement Commercial</option>
+                  <option value="autre" style={{ background: '#1E2A3A', color: 'white' }}>Autre</option>
                 </select>
                 <textarea name="message" value={form.message} onChange={handleChange} required rows={5}
                   placeholder="Décrivez votre projet et vos objectifs..." className={`${inputClass} resize-none`} />
                 {error && <p className="font-inter text-red-400 text-sm text-center">Une erreur est survenue. Réessaie ou contacte-nous par email.</p>}
                 <motion.button type="submit" disabled={loading}
-                  className="w-full py-4 rounded-xl font-inter font-semibold text-ink flex items-center justify-center gap-2 disabled:opacity-70"
-                  style={{ background: 'linear-gradient(135deg, #C9A227, #D8B64A)' }}
-                  whileHover={{ scale: loading ? 1 : 1.02, boxShadow: loading ? 'none' : '0 0 32px rgba(201,162,39,0.42)' }}
+                  className="w-full py-4 rounded-xl font-inter font-semibold text-white flex items-center justify-center gap-2 disabled:opacity-70"
+                  style={{ background: 'linear-gradient(135deg, #2E86DE, #4A9DE8)' }}
+                  whileHover={{ scale: loading ? 1 : 1.02, boxShadow: loading ? 'none' : '0 0 32px rgba(46,134,222,0.42)' }}
                   whileTap={{ scale: loading ? 1 : 0.98 }}>
                   <Send size={17} />
                   {loading ? 'Envoi en cours...' : 'Envoyer ma demande'}
@@ -80,7 +79,6 @@ export default function Contact() {
               </form>
             )}
           </motion.div>
-
           <motion.div className="flex flex-col justify-center gap-9"
             initial={{ opacity: 0, x: 35 }} whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.15 }}>
@@ -92,8 +90,8 @@ export default function Contact() {
             ].map(({ Icon, label, value, href }) => (
               <div key={label} className="flex items-start gap-4">
                 <div className="w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0"
-                  style={{ background: 'rgba(201,162,39,0.14)' }}>
-                  <Icon size={19} color="#C9A227" />
+                  style={{ background: 'rgba(46,134,222,0.14)' }}>
+                  <Icon size={19} color="#2E86DE" />
                 </div>
                 <div>
                   <div className="font-syne font-semibold text-white/40 text-[11px] uppercase tracking-widest mb-1">{label}</div>

@@ -34,9 +34,8 @@ export default function Services() {
           viewport={{ once: true }} transition={{ duration: 0.6 }}>
           <span className="font-syne font-semibold text-xs uppercase tracking-widest text-gold mb-3 block">Nos Services</span>
           <h2 className="font-grotesk font-bold text-3xl md:text-4xl text-ink mb-4">Ce que nous faisons pour vous</h2>
-          <div className="mx-auto w-20 h-1 rounded-full" style={{ background: 'linear-gradient(90deg, #C9A227, #D8B64A)' }} />
+          <div className="mx-auto w-20 h-1 rounded-full" style={{ background: 'linear-gradient(90deg, #2E86DE, #4A9DE8)' }} />
         </motion.div>
-
         <div className="grid md:grid-cols-3 gap-7">
           {services.map((s, i) => (
             <motion.div key={s.title}
@@ -45,10 +44,10 @@ export default function Services() {
               whileInView={{ opacity: 1, y: 0, scale: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: i * 0.14 }}
-              whileHover={{ y: -7, boxShadow: '0 0 0 2px #C9A227, 0 24px 60px rgba(0,0,0,0.1)' }}
+              whileHover={{ y: -7, boxShadow: '0 0 0 2px #2E86DE, 0 24px 60px rgba(0,0,0,0.1)' }}
               style={{ boxShadow: '0 2px 20px rgba(0,0,0,0.06)' }}>
               <div className="w-14 h-14 rounded-2xl flex items-center justify-center text-2xl mb-6"
-                style={{ background: 'rgba(201,162,39,0.1)' }}>
+                style={{ background: 'rgba(46,134,222,0.1)' }}>
                 {s.emoji}
               </div>
               <h3 className="font-grotesk font-bold text-xl text-ink mb-3">{s.title}</h3>
@@ -57,7 +56,7 @@ export default function Services() {
                 {s.features.map((f) => (
                   <li key={f} className="flex items-center gap-2.5 font-inter text-sm text-ink/65">
                     <div className="w-4 h-4 rounded-full flex items-center justify-center flex-shrink-0"
-                      style={{ background: '#C9A227' }}>
+                      style={{ background: '#2E86DE' }}>
                       <Check size={10} color="white" strokeWidth={3} />
                     </div>
                     {f}
@@ -65,7 +64,7 @@ export default function Services() {
                 ))}
               </ul>
               <span className="inline-block px-4 py-1.5 rounded-full font-inter font-bold text-xs text-white"
-                style={{ background: '#C9A227' }}>
+                style={{ background: '#2E86DE' }}>
                 {s.badge}
               </span>
             </motion.div>
