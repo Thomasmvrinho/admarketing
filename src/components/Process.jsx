@@ -1,0 +1,43 @@
+﻿import { motion } from 'framer-motion'
+
+const steps = [
+  { num: '01', icon: 'ðŸ”', title: 'Analyse & Diagnostic', desc: "Nous Ã©tudions votre activitÃ©, vos objectifs et votre marchÃ© pour Ã©tablir une stratÃ©gie commerciale parfaitement adaptÃ©e." },
+  { num: '02', icon: 'ðŸ—ºï¸', title: 'StratÃ©gie & Plan', desc: "Nous dÃ©finissons ensemble les meilleures actions Ã  mettre en place pour atteindre vos objectifs de croissance." },
+  { num: '03', icon: 'âš™ï¸', title: 'Mise en Å’uvre', desc: "Nos experts dÃ©ploient le plan d'action et assurent le suivi opÃ©rationnel rigoureux de chaque Ã©tape." },
+  { num: '04', icon: 'ðŸ†', title: 'RÃ©sultats & ROI', desc: "Nous mesurons les rÃ©sultats et optimisons continuellement la stratÃ©gie pour maximiser votre retour sur investissement." },
+]
+
+export default function Process() {
+  return (
+    <section id="process" className="py-24 bg-ink overflow-hidden">
+      <div className="max-w-7xl mx-auto px-6">
+        <motion.div className="text-center mb-16"
+          initial={{ opacity: 0, y: 28 }} whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }} transition={{ duration: 0.6 }}>
+          <span className="font-syne font-semibold text-xs uppercase tracking-widest text-gold mb-3 block">Notre mÃ©thode</span>
+          <h2 className="font-grotesk font-bold text-3xl md:text-4xl text-white mb-4">Un processus Ã©prouvÃ©, des rÃ©sultats concrets</h2>
+          <div className="mx-auto w-20 h-1 rounded-full" style={{ background: 'linear-gradient(90deg, #c9a227, #D8B64A)' }} />
+        </motion.div>
+
+        <div className="relative grid md:grid-cols-4 gap-10">
+          <div className="hidden md:block absolute top-8 left-[14%] right-[14%] h-px"
+            style={{ background: 'linear-gradient(90deg, #c9a227, #D8B64A)', opacity: 0.35 }} />
+          {steps.map((step, i) => (
+            <motion.div key={step.num}
+              className="relative flex flex-col items-center text-center z-10"
+              initial={{ opacity: 0, y: 38 }} whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }} transition={{ duration: 0.55, delay: i * 0.14 }}>
+              <div className="w-16 h-16 rounded-full flex items-center justify-center font-grotesk font-bold text-lg text-ink mb-5 shadow-lg"
+                style={{ background: 'linear-gradient(135deg, #c9a227, #D8B64A)' }}>
+                {step.num}
+              </div>
+              <div className="text-3xl mb-3">{step.icon}</div>
+              <h3 className="font-syne font-bold text-lg text-white mb-3">{step.title}</h3>
+              <p className="font-inter text-white/45 text-sm leading-relaxed">{step.desc}</p>
+            </motion.div>
+          ))}
+        </div>
+      </div>
+    </section>
+  )
+}
