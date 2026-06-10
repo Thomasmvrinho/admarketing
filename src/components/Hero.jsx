@@ -208,7 +208,7 @@ export default function Hero() {
           </motion.div>
 
           <motion.div
-            className="absolute top-20 -right-4 md:-right-8 bg-ink-soft rounded-2xl px-5 py-3 flex items-center gap-3 shadow-xl"
+            className="absolute -top-6 -right-4 md:-right-8 bg-ink-soft rounded-2xl px-5 py-3 flex items-center gap-3 shadow-xl"
             style={{ border: '1px solid rgba(212,175,55,0.25)' }}
             initial={{ opacity: 0, scale: 0.7 }}
             animate={{ opacity: 1, scale: 1 }}
