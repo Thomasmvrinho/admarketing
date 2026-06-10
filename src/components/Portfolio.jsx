@@ -64,7 +64,7 @@ export default function Portfolio() {
               )}
               <div className="p-5 bg-ink-soft flex-1">
                 <h3 className="font-grotesk font-bold text-white mb-3">{p.title}</h3>
-                <div className="flex flex-wrap gap-2">
+                <div className="flex flex-col gap-2">
                   {p.tags.map((tag) => (
                     <span key={tag} className="px-3 py-1 rounded-full font-inter text-xs font-semibold"
                       style={{ background: 'rgba(212,175,55,0.12)', color: '#D4AF37' }}>
