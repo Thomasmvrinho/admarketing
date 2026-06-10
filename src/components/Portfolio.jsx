@@ -24,14 +24,14 @@ export default function Portfolio() {
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {projects.map((p, i) => (
             <motion.div key={i}
-              className="group relative rounded-2xl overflow-hidden"
+              className="group relative rounded-2xl overflow-hidden flex flex-col"
               initial={{ opacity: 0, scale: 0.92 }} whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }} transition={{ duration: 0.5, delay: i * 0.09 }}
               whileHover={{ y: -5, boxShadow: '0 20px 55px rgba(0,0,0,0.3)' }}
               style={{ boxShadow: '0 2px 16px rgba(0,0,0,0.2)', border: '1px solid rgba(212,175,55,0.15)' }}>
               {p.dev ? (
-                <div className="h-52 flex flex-col items-center justify-center rounded-t-2xl"
-                  style={{ background: 'linear-gradient(135deg, #111111 60%, #0a0a0a)', border: '1px dashed rgba(212,175,55,0.3)' }}>
+                <div className="h-52 flex flex-col items-center justify-center"
+                  style={{ background: 'linear-gradient(135deg, #111111 60%, #0a0a0a)', borderBottom: '1px dashed rgba(212,175,55,0.3)' }}>
                   <span className="text-3xl mb-3">🚧</span>
                   <span className="font-grotesk font-bold text-white/60 text-sm tracking-wide">En développement</span>
                 </div>
@@ -62,7 +62,7 @@ export default function Portfolio() {
                   </div>
                 </div>
               )}
-              <div className="p-5 bg-ink-soft">
+              <div className="p-5 bg-ink-soft flex-1">
                 <h3 className="font-grotesk font-bold text-white mb-3">{p.title}</h3>
                 <div className="flex flex-wrap gap-2">
                   {p.tags.map((tag) => (
