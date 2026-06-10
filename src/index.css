@@ -8,8 +8,8 @@
   html { scroll-behavior: smooth; }
   body {
     font-family: 'Inter', sans-serif;
-    background-color: #ffffff;
-    color: #0F172A;
+    background-color: #0F172A;
+    color: #F5F5F0;
     overflow-x: hidden;
   }
   * { cursor: none !important; }
@@ -17,7 +17,7 @@
 
 @layer utilities {
   .gradient-text {
-    background: linear-gradient(135deg, #c9a227, #e8c547);
+    background: linear-gradient(135deg, #D4AF37, #E5C158);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -25,5 +25,5 @@
 }
 
 ::-webkit-scrollbar { width: 5px; }
-::-webkit-scrollbar-track { background: #0F172A; }
-::-webkit-scrollbar-thumb { background: #c9a227; border-radius: 3px; }
+::-webkit-scrollbar-track { background: #050505; }
+::-webkit-scrollbar-thumb { background: #D4AF37; border-radius: 3px; }

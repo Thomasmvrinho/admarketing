@@ -4,12 +4,12 @@ export default {
   theme: {
     extend: {
       colors: {
-        gold: '#2E86DE',
-        'gold-light': '#4A9DE8',
-        ink: '#1E2A3A',
-        'ink-soft': '#2a3a4d',
-        cloud: '#f5f5f5',
-        muted: '#6b7280',
+        gold: '#D4AF37',
+        'gold-light': '#E5C158',
+        ink: '#0F172A',
+        'ink-soft': '#1e293b',
+        cloud: '#F5F5F0',
+        muted: '#A1A1AA',
       },
       fontFamily: {
         grotesk: ['"Space Grotesk"', 'sans-serif'],
