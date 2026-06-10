@@ -15,7 +15,7 @@ const footerLinks = [
 export default function Footer() {
   const [logoErr, setLogoErr] = useState(false)
   return (
-    <footer className="pt-12 pb-6" style={{ background: '#1E2A3A' }}>
+    <footer className="pt-12 pb-6 bg-ink">
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex flex-col md:flex-row items-center justify-between gap-8 mb-10">
           <a href="#home">
@@ -24,7 +24,7 @@ export default function Footer() {
                 onError={() => setLogoErr(true)} />
             ) : (
               <span className="font-grotesk font-bold text-xl">
-                <span style={{ color: '#2E86DE' }}>AD</span>
+                <span style={{ color: '#D4AF37' }}>AD</span>
                 <span className="text-white">MARKETING</span>
               </span>
             )}
@@ -41,7 +41,7 @@ export default function Footer() {
             {[Instagram, Linkedin].map((Icon, i) => (
               <motion.a key={i} href="#"
                 className="w-9 h-9 rounded-xl flex items-center justify-center text-white/35 hover:text-gold transition-colors"
-                style={{ border: '1px solid rgba(255,255,255,0.09)' }}
+                style={{ border: '1px solid rgba(212,175,55,0.15)' }}
                 whileHover={{ scale: 1.12, y: -2 }} aria-label="Social">
                 <Icon size={16} />
               </motion.a>
@@ -49,7 +49,7 @@ export default function Footer() {
           </div>
         </div>
         <div className="h-px mb-6"
-          style={{ background: 'linear-gradient(90deg, transparent, rgba(46,134,222,0.6), transparent)' }} />
+          style={{ background: 'linear-gradient(90deg, transparent, rgba(212,175,55,0.5), transparent)' }} />
         <div className="flex flex-col sm:flex-row items-center justify-between gap-2">
           <span className="font-inter text-white/25 text-sm">© 2026 ADMARKETING — Tous droits réservés</span>
           <span className="font-inter text-white/25 text-sm">Fait avec passion 🖤🏆</span>

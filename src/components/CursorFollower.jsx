@@ -20,7 +20,7 @@ export default function CursorFollower() {
   return (
     <motion.div
       className="fixed pointer-events-none z-[9999] hidden md:block rounded-full"
-      style={{ width: 10, height: 10, background: '#c9a227', top: -5, left: -5, x, y, scale }}
+      style={{ width: 10, height: 10, background: '#D4AF37', top: -5, left: -5, x, y, scale }}
     />
   )
 }

@@ -1,15 +1,15 @@
-﻿import { motion } from 'framer-motion'
+import { motion } from 'framer-motion'
 
 const items = [
-  "Apport d'Affaires", 'Formation Commerciale', 'DÃ©veloppement Commercial',
-  'Mise en Relation', 'StratÃ©gie', 'Croissance', 'Partenariats', 'Performance', 'Prospection',
-  "Apport d'Affaires", 'Formation Commerciale', 'DÃ©veloppement Commercial',
-  'Mise en Relation', 'StratÃ©gie', 'Croissance', 'Partenariats', 'Performance', 'Prospection',
+  "Apport d'Affaires", 'Formation Commerciale', 'Développement Commercial',
+  'Mise en Relation', 'Stratégie', 'Croissance', 'Partenariats', 'Performance', 'Prospection',
+  "Apport d'Affaires", 'Formation Commerciale', 'Développement Commercial',
+  'Mise en Relation', 'Stratégie', 'Croissance', 'Partenariats', 'Performance', 'Prospection',
 ]
 
 export default function Marquee() {
   return (
-    <div className="bg-[#111111] py-5 overflow-hidden border-y border-white/5">
+    <div className="bg-ink-soft py-5 overflow-hidden border-y border-white/5">
       <motion.div
         className="flex items-center gap-8 whitespace-nowrap"
         style={{ width: 'max-content' }}
@@ -21,7 +21,7 @@ export default function Marquee() {
             <span className="font-syne font-semibold uppercase tracking-widest text-sm text-white/30">
               {item}
             </span>
-            <span className="text-gold text-base select-none">Â·</span>
+            <span className="text-gold text-base select-none">·</span>
           </span>
         ))}
       </motion.div>

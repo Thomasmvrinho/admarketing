@@ -4,24 +4,24 @@ import { ChevronLeft, ChevronRight, Star } from 'lucide-react'
 
 const testimonials = [
   {
-    name: 'Frédéric Lamarre',
-    role: 'Directeur Commercial — Groupe Luminia',
-    text: "ADMARKETING a été un véritable accélérateur pour notre développement. En moins de 6 mois, nous avons signé 12 nouveaux contrats grâce à leur réseau et leur expertise en apport d'affaires.",
-    img: 'https://placehold.co/80x80/2E86DE/ffffff?text=FL',
+    name: 'Thomas Marinho',
+    role: 'PDG — THOMASMVRINHO',
+    text: "ADMARKETING a été un véritable accélérateur pour notre développement. En moins de 6 mois, nous avons signé 3 nouveaux contrats grâce à leur réseau et leur expertise en apport d'affaires.",
+    img: 'https://placehold.co/80x80/D4AF37/050505?text=TM',
     stars: 5,
   },
   {
     name: 'Isabelle Renaud',
     role: 'Gérante — Cabinet Conseil RH',
     text: "La formation commerciale dispensée par ADMARKETING a transformé notre équipe. Nos taux de conversion ont augmenté de 35% en seulement 3 mois. Un investissement rentabilisé dès le premier trimestre.",
-    img: 'https://placehold.co/80x80/4A9DE8/ffffff?text=IR',
+    img: 'https://placehold.co/80x80/E5C158/050505?text=IR',
     stars: 5,
   },
   {
     name: 'Marc-Antoine Vidal',
     role: 'CEO — StartUp FinTech',
     text: "Grâce à la stratégie de développement commercial élaborée avec ADMARKETING, nous avons conquis 3 nouveaux marchés en 12 mois. Leur approche structurée et leur suivi sont exemplaires.",
-    img: 'https://placehold.co/80x80/2E86DE/ffffff?text=MV',
+    img: 'https://placehold.co/80x80/D4AF37/050505?text=MV',
     stars: 5,
   },
 ]
@@ -32,14 +32,14 @@ export default function Testimonials() {
   const next = () => setCurrent((c) => (c + 1) % testimonials.length)
 
   return (
-    <section id="testimonials" className="py-24 bg-ink">
+    <section id="testimonials" className="py-24 bg-ink-soft">
       <div className="max-w-7xl mx-auto px-6">
         <motion.div className="text-center mb-16"
           initial={{ opacity: 0, y: 28 }} whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }} transition={{ duration: 0.6 }}>
           <span className="font-syne font-semibold text-xs uppercase tracking-widest text-gold mb-3 block">Témoignages</span>
           <h2 className="font-grotesk font-bold text-3xl md:text-4xl text-white mb-4">Ce que disent nos clients</h2>
-          <div className="mx-auto w-20 h-1 rounded-full" style={{ background: 'linear-gradient(90deg, #2E86DE, #4A9DE8)' }} />
+          <div className="mx-auto w-20 h-1 rounded-full" style={{ background: 'linear-gradient(90deg, #D4AF37, #E5C158)' }} />
         </motion.div>
         <div className="max-w-2xl mx-auto">
           <div className="relative min-h-[260px]">
@@ -48,10 +48,10 @@ export default function Testimonials() {
                 initial={{ opacity: 0, x: 50 }} animate={{ opacity: 1, x: 0 }}
                 exit={{ opacity: 0, x: -50 }} transition={{ duration: 0.38 }}
                 className="rounded-2xl p-8 md:p-10"
-                style={{ background: 'rgba(255,255,255,0.04)', backdropFilter: 'blur(18px)', border: '1px solid rgba(46,134,222,0.15)' }}>
+                style={{ background: 'rgba(255,255,255,0.03)', backdropFilter: 'blur(18px)', border: '1px solid rgba(212,175,55,0.15)' }}>
                 <div className="flex gap-1 mb-5">
                   {[...Array(testimonials[current].stars)].map((_, j) => (
-                    <Star key={j} size={16} fill="#2E86DE" color="#2E86DE" />
+                    <Star key={j} size={16} fill="#D4AF37" color="#D4AF37" />
                   ))}
                 </div>
                 <p className="font-inter text-white/75 text-base md:text-lg leading-relaxed mb-7 italic">
@@ -78,7 +78,7 @@ export default function Testimonials() {
               {testimonials.map((_, j) => (
                 <button key={j} onClick={() => setCurrent(j)}
                   className="rounded-full transition-all duration-300"
-                  style={{ width: j === current ? 26 : 8, height: 8, background: j === current ? 'linear-gradient(90deg, #2E86DE, #4A9DE8)' : 'rgba(255,255,255,0.18)' }}
+                  style={{ width: j === current ? 26 : 8, height: 8, background: j === current ? 'linear-gradient(90deg, #D4AF37, #E5C158)' : 'rgba(255,255,255,0.18)' }}
                   aria-label={`Témoignage ${j + 1}`} />
               ))}
             </div>
