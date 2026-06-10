@@ -3,7 +3,7 @@ import { ExternalLink } from 'lucide-react'
 
 const projects = [
   { title: 'Thomasmvrinho', tags: ["Apport d'Affaires", 'Création de site internet'], img: `${import.meta.env.BASE_URL}projet1.png`, dev: false, link: 'https://mon-projet-omega-one.vercel.app/' },
-  { title: 'Leggett Immobilier', tags: ["Apport d'Affaires", 'Immobilier'], img: `${import.meta.env.BASE_URL}leggett.png`, dev: false },
+  { title: 'Leggett Immobilier', tags: ["Apport d'Affaires", 'Immobilier'], img: `${import.meta.env.BASE_URL}leggett.png`, dev: false, contain: true, bg: '#ffffff' },
   { title: 'En développement', tags: [], img: null, dev: true },
   { title: 'En développement', tags: [], img: null, dev: true },
   { title: 'En développement', tags: [], img: null, dev: true },
@@ -36,9 +36,9 @@ export default function Portfolio() {
                   <span className="font-grotesk font-bold text-white/60 text-sm tracking-wide">En développement</span>
                 </div>
               ) : (
-                <div className="relative overflow-hidden h-52">
+                <div className="relative overflow-hidden h-52" style={{ background: p.bg || 'transparent' }}>
                   <img src={p.img} alt={p.title}
-                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                    className={`w-full h-full transition-transform duration-500 group-hover:scale-110 ${p.contain ? 'object-contain p-6' : 'object-cover'}`}
                     loading="lazy" />
                   <div className="absolute inset-0 bg-ink/80 opacity-0 group-hover:opacity-100 transition-all duration-300 flex items-center justify-center">
                     {p.link ? (
