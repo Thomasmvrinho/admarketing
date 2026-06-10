@@ -3,7 +3,7 @@ import { ExternalLink } from 'lucide-react'
 
 const projects = [
   { title: 'Thomasmvrinho', tags: ["Apport d'Affaires", 'Création de site internet'], img: `${import.meta.env.BASE_URL}projet1.png`, dev: false, link: 'https://mon-projet-omega-one.vercel.app/' },
-  { title: 'En développement', tags: [], img: null, dev: true },
+  { title: 'Leggett Immobilier', tags: ["Apport d'Affaires", 'Immobilier'], img: `${import.meta.env.BASE_URL}leggett.png`, dev: false },
   { title: 'En développement', tags: [], img: null, dev: true },
   { title: 'En développement', tags: [], img: null, dev: true },
   { title: 'En développement', tags: [], img: null, dev: true },
