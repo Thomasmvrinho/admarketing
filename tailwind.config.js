@@ -6,8 +6,8 @@ export default {
       colors: {
         gold: '#D4AF37',
         'gold-light': '#E5C158',
-        ink: '#0F172A',
-        'ink-soft': '#1e293b',
+        ink: '#050505',
+        'ink-soft': '#111111',
         cloud: '#F5F5F0',
         muted: '#A1A1AA',
       },
