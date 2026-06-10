@@ -2,7 +2,7 @@ import { motion } from 'framer-motion'
 import { ExternalLink } from 'lucide-react'
 
 const projects = [
-  { title: 'Thomasmvrinho', tags: ["Apport d'Affaires", 'Création de site internet'], img: `${import.meta.env.BASE_URL}projet1.png`, dev: false, link: 'https://mon-projet-omega-one.vercel.app/' },
+  { title: 'Thomasmvrinho', tags: ['Développement commercial', 'Création de site internet'], img: `${import.meta.env.BASE_URL}projet1.png`, dev: false, link: 'https://mon-projet-omega-one.vercel.app/' },
   { title: 'Leggett Immobilier', tags: ["Apport d'Affaires", 'Immobilier'], img: `${import.meta.env.BASE_URL}leggett.png`, dev: false, contain: true, bg: '#ffffff' },
   { title: 'En développement', tags: [], img: null, dev: true },
   { title: 'En développement', tags: [], img: null, dev: true },
