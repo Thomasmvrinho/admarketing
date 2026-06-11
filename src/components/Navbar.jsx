@@ -17,7 +17,10 @@ export default function Navbar() {
   const [open, setOpen] = useState(false)
 
   useEffect(() => {
-    const fn = () => setScrolled(window.scrollY > 50)
+    const fn = () => {
+      setScrolled(window.scrollY > 50)
+      setOpen(false)
+    }
     window.addEventListener('scroll', fn)
     return () => window.removeEventListener('scroll', fn)
   }, [])
@@ -33,7 +36,11 @@ export default function Navbar() {
           : 'py-5 bg-transparent'
       }`}
     >
-      <div className="max-w-7xl mx-auto px-6 flex items-center justify-center gap-10">
+      <div className="max-w-7xl mx-auto px-6 flex items-center justify-between gap-10">
+
+        <a href="#home">
+          <img src={`${import.meta.env.BASE_URL}logo-admarketing.png`} alt="ADMARKETING" className="h-20 w-96 object-contain" style={{ mixBlendMode: 'screen' }} />
+        </a>
 
         <div className="hidden md:flex items-center gap-7">
           {links.map((l) => (

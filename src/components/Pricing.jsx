@@ -71,7 +71,7 @@ function PlanCard({ plan, highlighted }) {
       <p className="font-inter text-white/40 text-sm mb-5">{plan.desc}</p>
       <div className="mb-8">
         <span className="font-inter text-xs font-medium text-white/30 uppercase tracking-widest block mb-1">Tarif</span>
-        <span className="font-grotesk font-bold text-3xl text-white">{plan.price}</span>
+        <a href="#contact" className="font-grotesk font-bold text-3xl text-white hover:text-gold transition-colors duration-200">{plan.price}</a>
       </div>
       <ul className="space-y-3 mb-8 flex-1">
         {plan.features.map((f) => (
