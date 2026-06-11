@@ -1,11 +1,11 @@
 import { useState } from 'react'
 import { motion } from 'framer-motion'
-import { Mail, Phone, MapPin, Instagram, Linkedin, Send, User } from 'lucide-react'
+import { Mail, Phone, MapPin, Linkedin, Send, User } from 'lucide-react'
 
 const inputClass = 'w-full px-5 py-4 rounded-xl font-inter text-sm bg-white/5 border border-white/10 text-white placeholder-white/30 outline-none focus:border-gold transition-colors duration-200'
 
 export default function Contact() {
-  const [form, setForm] = useState({ name: '', email: '', phone: '', type: '', message: '' })
+  const [form, setForm] = useState({ name: '', email: '', phone: '', company: '', website: '', type: '', message: '' })
   const [sent, setSent] = useState(false)
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState(false)
@@ -57,17 +57,12 @@ export default function Contact() {
                 <input type="text" name="name" value={form.name} onChange={handleChange} required placeholder="Votre nom complet" className={inputClass} />
                 <input type="email" name="email" value={form.email} onChange={handleChange} required placeholder="Votre adresse email" className={inputClass} />
                 <input type="tel" name="phone" value={form.phone} onChange={handleChange} placeholder="Téléphone (optionnel)" className={inputClass} />
-                <select name="type" value={form.type} onChange={handleChange} className={inputClass}
-                  style={{ color: form.type ? 'white' : 'rgba(255,255,255,0.3)', appearance: 'none' }}>
-                  <option value="" style={{ background: '#111111', color: '#888' }}>Type de besoin</option>
-                  <option value="apport" style={{ background: '#111111', color: 'white' }}>Apport d'Affaires</option>
-                  <option value="formation" style={{ background: '#111111', color: 'white' }}>Formation</option>
-                  <option value="developpement" style={{ background: '#111111', color: 'white' }}>Développement Commercial</option>
-                  <option value="autre" style={{ background: '#111111', color: 'white' }}>Autre</option>
-                </select>
+                <input type="text" name="company" value={form.company} onChange={handleChange} placeholder="Nom de l'entreprise" className={inputClass} />
+                <input type="url" name="website" value={form.website} onChange={handleChange} placeholder="Site web actuel (optionnel)" className={inputClass} />
+                <input type="text" name="type" value={form.type} onChange={handleChange} placeholder="Type de projet" className={inputClass} />
                 <textarea name="message" value={form.message} onChange={handleChange} required rows={5}
-                  placeholder="Décrivez votre projet et vos objectifs..." className={`${inputClass} resize-none`} />
-                {error && <p className="font-inter text-red-400 text-sm text-center">Une erreur est survenue. Réessaie ou contacte-nous par email.</p>}
+                  placeholder="Décrivez votre projet, vos objectifs..." className={`${inputClass} resize-none`} />
+                {error && <p className="font-inter text-red-400 text-sm text-center">Une erreur est survenue. Réessayez ou contactez-nous par email.</p>}
                 <motion.button type="submit" disabled={loading}
                   className="w-full py-4 rounded-xl font-inter font-semibold text-ink flex items-center justify-center gap-2 disabled:opacity-70"
                   style={{ background: 'linear-gradient(135deg, #D4AF37, #E5C158)' }}
@@ -84,8 +79,8 @@ export default function Contact() {
             viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.15 }}>
             {[
               { Icon: User, label: 'Contact', value: 'Adrien Lafarge', href: null },
-              { Icon: Mail, label: 'Email', value: 'contact@admarketing.fr', href: 'mailto:contact@admarketing.fr' },
-              { Icon: Phone, label: 'Téléphone', value: '+33 XX XX XX XX XX', href: '#' },
+              { Icon: Mail, label: 'Email', value: 'contact@ad-marketing.pro', href: 'mailto:contact@ad-marketing.pro' },
+              { Icon: Phone, label: 'Téléphone', value: '06 67 40 53 51', href: 'tel:+33667405351' },
               { Icon: MapPin, label: 'Localisation', value: 'France 🇫🇷 — Intervention nationale & internationale', href: null },
             ].map(({ Icon, label, value, href }) => (
               <div key={label} className="flex items-start gap-4">
@@ -106,14 +101,12 @@ export default function Contact() {
             <div>
               <div className="font-syne font-semibold text-white/40 text-[11px] uppercase tracking-widest mb-4">Réseaux sociaux</div>
               <div className="flex gap-3">
-                {[Instagram, Linkedin].map((Icon, i) => (
-                  <motion.a key={i} href="#"
+                <motion.a href="https://www.linkedin.com/in/adrien-lafarge-91585b319/"
                     className="w-11 h-11 rounded-xl flex items-center justify-center text-white/40 hover:text-gold transition-colors"
                     style={{ border: '1px solid rgba(212,175,55,0.15)' }}
-                    whileHover={{ scale: 1.1, y: -2 }} aria-label="Social">
-                    <Icon size={19} />
+                    whileHover={{ scale: 1.1, y: -2 }} aria-label="LinkedIn">
+                    <Linkedin size={19} />
                   </motion.a>
-                ))}
               </div>
             </div>
           </motion.div>
