@@ -84,7 +84,8 @@ function PlanCard({ plan, highlighted }) {
           </li>
         ))}
       </ul>
-      <motion.a href="#contact"
+      <motion.button
+        onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
         className="w-full py-3.5 rounded-xl font-inter font-semibold text-sm transition-all duration-300 text-center block"
         style={highlighted
           ? { background: 'linear-gradient(135deg, #D4AF37, #E5C158)', color: '#050505' }
@@ -92,7 +93,7 @@ function PlanCard({ plan, highlighted }) {
         whileHover={{ scale: 1.02, ...(highlighted ? { boxShadow: '0 0 24px rgba(212,175,55,0.4)' } : {}) }}
         whileTap={{ scale: 0.98 }}>
         {plan.cta}
-      </motion.a>
+      </motion.button>
     </div>
   )
 }
