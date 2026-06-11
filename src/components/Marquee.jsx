@@ -1,5 +1,3 @@
-import { motion } from 'framer-motion'
-
 const items = [
   "Apport d'Affaires", 'Formation Commerciale', 'Développement Commercial',
   'Mise en Relation', 'Stratégie', 'Croissance', 'Partenariats', 'Performance', 'Prospection',
@@ -10,12 +8,8 @@ const items = [
 export default function Marquee() {
   return (
     <div className="bg-ink-soft py-5 overflow-hidden border-y border-white/5">
-      <motion.div
-        className="flex items-center gap-8 whitespace-nowrap"
-        style={{ width: 'max-content' }}
-        animate={{ x: ['0%', '-50%'] }}
-        transition={{ duration: 35, ease: 'linear', repeat: Infinity }}
-      >
+      <div className="flex items-center gap-8 whitespace-nowrap"
+        style={{ width: 'max-content', animation: 'marquee 35s linear infinite', willChange: 'transform' }}>
         {items.map((item, i) => (
           <span key={i} className="flex items-center gap-8">
             <span className="font-syne font-semibold uppercase tracking-widest text-sm text-white/30">
@@ -24,7 +18,7 @@ export default function Marquee() {
             <span className="text-gold text-base select-none">·</span>
           </span>
         ))}
-      </motion.div>
+      </div>
     </div>
   )
 }
