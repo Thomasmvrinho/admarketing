@@ -13,7 +13,7 @@ const services = [
     emoji: '🎓',
     title: 'Formation Commerciale',
     desc: "Des formations sur-mesure pour développer les compétences de vos équipes commerciales et maximiser vos performances de vente dès le premier mois.",
-    features: ['Formations sur-mesure', 'Coaching individuel', 'Supports pédagogiques', 'Certification possible'],
+    features: ['Formations sur-mesure', 'Coaching individuel', 'Supports pédagogiques', 'Recommandations stratégiques'],
     badge: 'Sur devis',
   },
   {
@@ -39,7 +39,7 @@ export default function Services() {
         <div className="grid md:grid-cols-3 gap-7">
           {services.map((s, i) => (
             <motion.div key={s.title}
-              className="group bg-white rounded-2xl p-8"
+              className="group bg-white rounded-2xl p-8 flex flex-col"
               initial={{ opacity: 0, y: 38, scale: 0.96 }}
               whileInView={{ opacity: 1, y: 0, scale: 1 }}
               viewport={{ once: true }}
@@ -63,10 +63,14 @@ export default function Services() {
                   </li>
                 ))}
               </ul>
-              <span className="inline-block px-4 py-1.5 rounded-full font-inter font-bold text-xs text-ink"
-                style={{ background: '#D4AF37' }}>
-                {s.badge}
-              </span>
+              <div className="mt-auto pt-7">
+                <button
+                  onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+                  className="inline-block px-4 py-1.5 rounded-full font-inter font-bold text-xs text-ink transition-opacity hover:opacity-80"
+                  style={{ background: '#D4AF37' }}>
+                  {s.badge}
+                </button>
+              </div>
             </motion.div>
           ))}
         </div>
