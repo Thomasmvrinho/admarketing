@@ -85,14 +85,15 @@ export default function Navbar() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -8 }}
             transition={{ duration: 0.25 }}
-            className="md:hidden absolute inset-x-0 top-full bg-ink/97 backdrop-blur-xl border-t border-white/10"
+            className="md:hidden absolute inset-x-0 top-full border-t border-b"
+            style={{ background: '#0e0e0e', borderColor: 'rgba(212,175,55,0.25)' }}
           >
             <div className="px-6 py-6 flex flex-col gap-5">
               {links.map((l, i) => (
                 <motion.a
                   key={l.label}
                   href={l.href}
-                  className="font-inter text-white/80 font-medium hover:text-gold transition-colors"
+                  className="font-inter text-white font-medium hover:text-gold transition-colors"
                   onClick={() => setOpen(false)}
                   initial={{ x: -14, opacity: 0 }}
                   animate={{ x: 0, opacity: 1 }}
