@@ -17,12 +17,14 @@ export default function Navbar() {
   const [open, setOpen] = useState(false)
 
   useEffect(() => {
-    const fn = () => {
-      setScrolled(window.scrollY > 50)
-      setOpen(false)
+    const onScroll = () => setScrolled(window.scrollY > 50)
+    const onTouch = () => setOpen(false)
+    window.addEventListener('scroll', onScroll, { passive: true })
+    document.addEventListener('touchmove', onTouch, { passive: true })
+    return () => {
+      window.removeEventListener('scroll', onScroll)
+      document.removeEventListener('touchmove', onTouch)
     }
-    window.addEventListener('scroll', fn)
-    return () => window.removeEventListener('scroll', fn)
   }, [])
 
   return (
