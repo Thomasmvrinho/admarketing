@@ -32,7 +32,12 @@ export default function App() {
   }, [])
 
   if (page === 'mentions') {
-    return <MentionsLegales />
+    return (
+      <>
+        <CursorFollower />
+        <MentionsLegales />
+      </>
+    )
   }
 
   return (
