@@ -12,6 +12,7 @@ const Portfolio = lazy(() => import('./components/Portfolio'))
 const Stats = lazy(() => import('./components/Stats'))
 const Testimonials = lazy(() => import('./components/Testimonials'))
 const Pricing = lazy(() => import('./components/Pricing'))
+const ROICalculator = lazy(() => import('./components/ROICalculator'))
 const FAQ = lazy(() => import('./components/FAQ'))
 const Contact = lazy(() => import('./components/Contact'))
 const Footer = lazy(() => import('./components/Footer'))
@@ -56,6 +57,7 @@ export default function App() {
           <Stats />
           <Testimonials />
           <Pricing />
+          <ROICalculator />
           <FAQ />
           <Contact />
         </Suspense>

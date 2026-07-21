@@ -26,6 +26,40 @@
 ::-webkit-scrollbar-track { background: #050505; }
 ::-webkit-scrollbar-thumb { background: #D4AF37; border-radius: 3px; }
 
+/* ROI Slider */
+.roi-slider {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 4px;
+  border-radius: 9999px;
+  background: linear-gradient(to right, #D4AF37 var(--fill, 0%), rgba(255,255,255,0.12) var(--fill, 0%));
+  outline: none;
+  cursor: none;
+}
+.roi-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #D4AF37, #E5C158);
+  box-shadow: 0 0 12px rgba(212,175,55,0.5);
+  cursor: none;
+  transition: box-shadow 0.2s;
+}
+.roi-slider::-webkit-slider-thumb:hover {
+  box-shadow: 0 0 20px rgba(212,175,55,0.7);
+}
+.roi-slider::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  border: none;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #D4AF37, #E5C158);
+  box-shadow: 0 0 12px rgba(212,175,55,0.5);
+  cursor: none;
+}
+
 @keyframes marquee {
   from { transform: translateX(0); }
   to { transform: translateX(-50%); }
