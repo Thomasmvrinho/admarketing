@@ -6,8 +6,6 @@
 import { Resend } from 'resend'
 import { rateLimit, clientIp } from './_ratelimit.js'
 
-const resend = new Resend(process.env.RESEND_API_KEY)
-
 const OWNER_EMAIL = 'contact@ad-marketing.pro'
 const FROM = 'ADMARKETING <contact@ad-marketing.pro>'
 
@@ -55,6 +53,13 @@ function buildNotifHtml(d) {
 
 export default async function handler(req, res) {
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' })
+
+  // Garde-fou : sans clé Resend, on renvoie une erreur propre au lieu de faire planter la fonction.
+  if (!process.env.RESEND_API_KEY) {
+    console.error('[contact] RESEND_API_KEY absente de l\'environnement Vercel')
+    return res.status(500).json({ error: "Configuration serveur incomplète (clé email manquante)." })
+  }
+  const resend = new Resend(process.env.RESEND_API_KEY)
 
   const { form } = req.body ?? {}
 
