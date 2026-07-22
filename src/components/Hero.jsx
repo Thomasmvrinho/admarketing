@@ -100,8 +100,8 @@ export default function Hero() {
               <Users size={18} className="text-gold" strokeWidth={2} />
             </div>
             <div>
-              <div className="font-grotesk font-bold text-white text-sm">200+ clients</div>
-              <div className="font-inter text-white/45 text-xs">accompagnés avec succès</div>
+              <div className="font-grotesk font-bold text-white text-sm">20+ clients</div>
+              <div className="font-inter text-white/45 text-xs">accompagnés en 1 an</div>
             </div>
           </motion.div>
 

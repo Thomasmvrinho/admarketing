@@ -22,8 +22,8 @@ function AnimatedCounter({ to, suffix = '', duration = 2 }) {
 }
 
 const stats = [
-  { to: 200, suffix: '+', label: 'Clients accompagnés' },
-  { to: 20, suffix: '+', label: 'Partenaires actifs' },
+  { to: 20, suffix: '+', label: 'Clients accompagnés' },
+  { to: 15, suffix: '+', label: 'Partenaires actifs' },
   { to: 1, suffix: ' an', label: "D'expérience" },
   { to: 98, suffix: '%', label: 'Taux de satisfaction' },
 ]
