@@ -34,13 +34,12 @@ export default function Footer() {
             </motion.a>
           </div>
         </div>
-        <div className="h-px mb-6"
-          style={{ background: 'linear-gradient(90deg, transparent, rgba(212,175,55,0.5), transparent)' }} />
+        <div className="h-px mb-6 bg-white/10" />
         <div className="flex flex-col sm:flex-row items-center justify-between gap-2">
-          <span className="font-inter text-white/25 text-sm">© 2026 ADMARKETING — Tous droits réservés</span>
+          <span className="font-inter text-white/25 text-sm">© 2026 ADMARKETING - Tous droits réservés</span>
           <a href="#mentions-legales"
             className="font-inter text-white/25 text-sm hover:text-gold transition-colors duration-200">
-            Politique de confidentialité
+            Mentions légales
           </a>
         </div>
       </div>

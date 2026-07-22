@@ -9,7 +9,7 @@ const sections = [
       '',
       'AD MARKETING',
       '88 Cours de la Martinique',
-      '33000 Bordeaux – France',
+      '33000 Bordeaux - France',
       'SIREN : 102 519 725',
       'E-mail : contact@ad-marketing.pro',
       'Téléphone : 06 67 40 53 51',
@@ -120,7 +120,7 @@ export default function MentionsLegales() {
         <motion.a
           href="#home"
           onClick={() => { window.location.hash = '' }}
-          className="inline-flex items-center gap-2 text-gold hover:text-gold-light transition-colors mb-12 font-inter text-sm"
+          className="inline-flex items-center gap-2 text-gold hover:text-white transition-colors mb-12 font-inter text-sm"
           initial={{ opacity: 0, x: -10 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.3 }}
@@ -136,12 +136,11 @@ export default function MentionsLegales() {
           transition={{ duration: 0.4 }}
         >
           Politique de{' '}
-          <span style={{ color: '#D4AF37' }}>confidentialité</span>
+          <span className="text-gold">confidentialité</span>
         </motion.h1>
 
         <motion.div
-          className="h-px w-20 mb-12"
-          style={{ background: '#D4AF37' }}
+          className="h-px w-16 mb-12 bg-gold/40"
           initial={{ scaleX: 0 }}
           animate={{ scaleX: 1 }}
           transition={{ duration: 0.4, delay: 0.1 }}
@@ -158,10 +157,7 @@ export default function MentionsLegales() {
               <h2 className="font-grotesk text-lg font-semibold text-gold mb-4">
                 {section.title}
               </h2>
-              <div
-                className="rounded-xl p-6 space-y-1"
-                style={{ background: '#111111', border: '1px solid rgba(212,175,55,0.08)' }}
-              >
+              <div className="rounded-xl p-6 space-y-1 bg-ink-soft border border-white/10">
                 {section.content.map((line, j) =>
                   line === '' ? (
                     <div key={j} className="h-3" />
@@ -175,7 +171,7 @@ export default function MentionsLegales() {
                   <ul className="space-y-1 pl-4 my-2">
                     {section.rights.map((right) => (
                       <li key={right} className="font-inter text-sm text-white/70 flex items-start gap-2">
-                        <span style={{ color: '#D4AF37' }} className="mt-1.5 text-xs">▸</span>
+                        <span className="text-gold mt-1.5 text-xs">▸</span>
                         {right}
                       </li>
                     ))}
@@ -196,7 +192,7 @@ export default function MentionsLegales() {
         </div>
 
         <div className="mt-16 pt-8 border-t border-white/10 text-center">
-          <span className="font-inter text-white/25 text-sm">© 2026 ADMARKETING — Tous droits réservés</span>
+          <span className="font-inter text-white/25 text-sm">© 2026 ADMARKETING - Tous droits réservés</span>
         </div>
       </div>
     </div>

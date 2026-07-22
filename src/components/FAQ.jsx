@@ -37,16 +37,15 @@ export default function FAQ() {
         <motion.div className="text-center mb-14"
           initial={{ opacity: 0, y: 28 }} whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }} transition={{ duration: 0.6 }}>
-          <span className="font-syne font-semibold text-xs uppercase tracking-widest text-gold mb-3 block">FAQ</span>
+          <span className="font-syne font-semibold text-[11px] uppercase tracking-[0.2em] text-gold mb-3 block">FAQ</span>
           <h2 className="font-grotesk font-bold text-3xl md:text-4xl text-white mb-4">Questions fréquentes</h2>
-          <div className="mx-auto w-20 h-1 rounded-full" style={{ background: 'linear-gradient(90deg, #D4AF37, #E5C158)' }} />
+          <div className="mx-auto w-16 h-px bg-gold/40" />
         </motion.div>
         <div className="space-y-3">
           {faqs.map((faq, i) => (
-            <motion.div key={i} className="rounded-2xl overflow-hidden"
+            <motion.div key={i} className="rounded-2xl overflow-hidden bg-ink-soft border border-white/10 hover:border-gold/30 transition-colors duration-300"
               initial={{ opacity: 0, y: 18 }} whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }} transition={{ duration: 0.4, delay: i * 0.07 }}
-              style={{ background: '#111111', border: '1px solid rgba(212,175,55,0.1)' }}>
+              viewport={{ once: true }} transition={{ duration: 0.4, delay: i * 0.07 }}>
               <button className="w-full flex items-center justify-between px-6 py-5 text-left group"
                 onClick={() => setOpen(open === i ? null : i)} aria-expanded={open === i}>
                 <span className="font-grotesk font-semibold text-white/80 pr-4 group-hover:text-gold transition-colors">{faq.q}</span>
@@ -60,7 +59,7 @@ export default function FAQ() {
                   <motion.div initial={{ height: 0, opacity: 0 }} animate={{ height: 'auto', opacity: 1 }}
                     exit={{ height: 0, opacity: 0 }} transition={{ duration: 0.3 }} style={{ overflow: 'hidden' }}>
                     <div className="px-6 pb-6">
-                      <div className="w-full h-px mb-4" style={{ background: 'linear-gradient(90deg, rgba(212,175,55,0.3), transparent)' }} />
+                      <div className="w-full h-px mb-4 bg-white/10" />
                       <p className="font-inter text-white/50 text-sm leading-relaxed">{faq.a}</p>
                     </div>
                   </motion.div>

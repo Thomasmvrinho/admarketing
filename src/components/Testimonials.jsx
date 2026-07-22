@@ -5,21 +5,21 @@ import { ChevronLeft, ChevronRight, Star } from 'lucide-react'
 const testimonials = [
   {
     name: 'Thomas Marinho',
-    role: 'PDG — THOMASMVRINHO',
+    role: 'Gérant, THOMASMVRINHO',
     text: "ADMARKETING a été un véritable accélérateur pour notre développement. En moins de 6 mois, nous avons signé 3 nouveaux contrats grâce à leur réseau et leur expertise en apport d'affaires.",
     img: 'https://placehold.co/80x80/D4AF37/050505?text=TM',
     stars: 5,
   },
   {
-    name: 'Isabelle Renaud',
-    role: 'Gérante — Cabinet Conseil RH',
-    text: "La formation commerciale dispensée par ADMARKETING a transformé notre équipe. Nos taux de conversion ont augmenté de 35% en seulement 3 mois. Un investissement rentabilisé dès le premier trimestre.",
-    img: 'https://placehold.co/80x80/E5C158/050505?text=IR',
+    name: 'Thierry Moutou',
+    role: 'Gérant, Radical',
+    text: "Adrien Lafarge me donne entière satisfaction. Des apports d'affaires parfaitement qualifiés. Quel plaisir !",
+    img: 'https://placehold.co/80x80/E5C158/050505?text=TM',
     stars: 5,
   },
   {
     name: 'Marc-Antoine Vidal',
-    role: 'CEO — StartUp FinTech',
+    role: 'CEO, StartUp FinTech',
     text: "Grâce à la stratégie de développement commercial élaborée avec ADMARKETING, nous avons conquis 3 nouveaux marchés en 12 mois. Leur approche structurée et leur suivi sont exemplaires.",
     img: 'https://placehold.co/80x80/D4AF37/050505?text=MV',
     stars: 5,
@@ -37,9 +37,9 @@ export default function Testimonials() {
         <motion.div className="text-center mb-16"
           initial={{ opacity: 0, y: 28 }} whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }} transition={{ duration: 0.6 }}>
-          <span className="font-syne font-semibold text-xs uppercase tracking-widest text-gold mb-3 block">Témoignages</span>
+          <span className="font-syne font-semibold text-[11px] uppercase tracking-[0.2em] text-gold mb-3 block">Témoignages</span>
           <h2 className="font-grotesk font-bold text-3xl md:text-4xl text-white mb-4">Ce que disent nos clients</h2>
-          <div className="mx-auto w-20 h-1 rounded-full" style={{ background: 'linear-gradient(90deg, #D4AF37, #E5C158)' }} />
+          <div className="mx-auto w-16 h-px bg-gold/40" />
         </motion.div>
         <div className="max-w-2xl mx-auto">
           <div className="relative min-h-[260px]">
@@ -78,7 +78,7 @@ export default function Testimonials() {
               {testimonials.map((_, j) => (
                 <button key={j} onClick={() => setCurrent(j)}
                   className="rounded-full transition-all duration-300"
-                  style={{ width: j === current ? 26 : 8, height: 8, background: j === current ? 'linear-gradient(90deg, #D4AF37, #E5C158)' : 'rgba(255,255,255,0.18)' }}
+                  style={{ width: j === current ? 26 : 8, height: 8, background: j === current ? '#D4AF37' : 'rgba(255,255,255,0.18)' }}
                   aria-label={`Témoignage ${j + 1}`} />
               ))}
             </div>

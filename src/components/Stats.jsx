@@ -22,8 +22,8 @@ function AnimatedCounter({ to, suffix = '', duration = 2 }) {
 }
 
 const stats = [
-  { to: 18, suffix: '+', label: 'Clients accompagnés' },
-  { to: 7, suffix: '+', label: 'Partenaires actifs' },
+  { to: 200, suffix: '+', label: 'Clients accompagnés' },
+  { to: 20, suffix: '+', label: 'Partenaires actifs' },
   { to: 1, suffix: ' an', label: "D'expérience" },
   { to: 98, suffix: '%', label: 'Taux de satisfaction' },
 ]
@@ -31,16 +31,15 @@ const stats = [
 export default function Stats() {
   return (
     <section className="py-20 bg-ink relative overflow-hidden">
-      <div className="absolute inset-0 opacity-20"
-        style={{ backgroundImage: 'radial-gradient(circle at 20% 50%, rgba(212,175,55,0.15) 0%, transparent 50%), radial-gradient(circle at 80% 50%, rgba(229,193,88,0.1) 0%, transparent 50%)' }} />
+      <div className="absolute inset-0 opacity-10 pointer-events-none"
+        style={{ backgroundImage: 'radial-gradient(circle at 50% 50%, rgba(212,175,55,0.12) 0%, transparent 55%)' }} />
       <div className="relative max-w-7xl mx-auto px-6">
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
           {stats.map((stat, i) => (
             <motion.div key={stat.label} className="text-center"
               initial={{ opacity: 0, y: 28 }} whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }} transition={{ duration: 0.55, delay: i * 0.13 }}>
-              <div className="font-grotesk font-bold text-5xl md:text-6xl mb-2"
-                style={{ background: 'linear-gradient(135deg, #D4AF37, #E5C158)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>
+              <div className="font-grotesk font-bold text-5xl md:text-6xl mb-2 text-gold">
                 <AnimatedCounter to={stat.to} suffix={stat.suffix} />
               </div>
               <div className="font-inter text-white/45 font-medium text-sm uppercase tracking-wide">{stat.label}</div>

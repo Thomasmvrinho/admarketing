@@ -58,10 +58,9 @@ export default function Navbar() {
 
         <motion.a
           href="#contact"
-          className="hidden md:block px-5 py-2.5 rounded-full font-inter font-semibold text-sm text-ink"
-          style={{ background: 'linear-gradient(135deg, #D4AF37, #E5C158)' }}
-          whileHover={{ scale: 1.05, boxShadow: '0 0 22px rgba(212,175,55,0.45)' }}
-          whileTap={{ scale: 0.95 }}
+          className="hidden md:block px-5 py-2.5 rounded-full font-inter font-semibold text-sm text-ink bg-gold transition-colors duration-300 hover:bg-gold-deep"
+          whileHover={{ y: -1 }}
+          whileTap={{ scale: 0.97 }}
         >
           Nous contacter
         </motion.a>
@@ -86,7 +85,7 @@ export default function Navbar() {
             exit={{ opacity: 0, y: -8 }}
             transition={{ duration: 0.25 }}
             className="md:hidden absolute inset-x-0 top-full border-t border-b"
-            style={{ background: '#0e0e0e', borderColor: 'rgba(212,175,55,0.25)' }}
+            style={{ background: '#141316', borderColor: 'rgba(212,175,55,0.2)' }}
           >
             <div className="px-6 py-6 flex flex-col gap-5">
               {links.map((l, i) => (
@@ -104,8 +103,7 @@ export default function Navbar() {
               ))}
               <motion.a
                 href="#contact"
-                className="mt-1 px-5 py-3 rounded-full font-inter font-semibold text-sm text-ink text-center"
-                style={{ background: 'linear-gradient(135deg, #D4AF37, #E5C158)' }}
+                className="mt-1 px-5 py-3 rounded-full font-inter font-semibold text-sm text-ink text-center bg-gold"
                 onClick={() => setOpen(false)}
                 initial={{ x: -14, opacity: 0 }}
                 animate={{ x: 0, opacity: 1 }}

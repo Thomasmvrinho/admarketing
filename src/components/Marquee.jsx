@@ -1,8 +1,8 @@
 const items = [
   "Apport d'Affaires", 'Formation Commerciale', 'Développement Commercial',
-  'Mise en Relation', 'Stratégie', 'Croissance', 'Partenariats', 'Performance', 'Prospection',
+  'Mise en Relation', 'Leads B2B Qualifiés', 'Prospection', 'Structuration de la Vente', 'Audit Commercial',
   "Apport d'Affaires", 'Formation Commerciale', 'Développement Commercial',
-  'Mise en Relation', 'Stratégie', 'Croissance', 'Partenariats', 'Performance', 'Prospection',
+  'Mise en Relation', 'Leads B2B Qualifiés', 'Prospection', 'Structuration de la Vente', 'Audit Commercial',
 ]
 
 export default function Marquee() {
