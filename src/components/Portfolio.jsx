@@ -2,7 +2,7 @@ import { motion } from 'framer-motion'
 import { ExternalLink, ArrowRight } from 'lucide-react'
 
 const projects = [
-  { title: 'Thomasmvrinho', tags: ['Développement commercial', 'Création de site internet'], img: `${import.meta.env.BASE_URL}projet1.png`, link: 'https://mon-projet-omega-one.vercel.app/' },
+  { title: 'Thomasmvrinho', tags: ['Développement commercial', 'Création de site internet'], img: `${import.meta.env.BASE_URL}projet1.png`, link: 'https://mon-projet-omega-one.vercel.app/', contain: true, noPad: true, bg: '#070607' },
   { title: 'Leggett Immobilier', tags: ["Apport d'Affaires", 'Immobilier'], img: `${import.meta.env.BASE_URL}leggett.png`, contain: true, bg: '#ffffff' },
   { title: 'Radical', tags: ["Apport d'Affaires", 'Dératisation'], img: `${import.meta.env.BASE_URL}radical.png` },
   { title: 'Evidence Assurances', tags: ["Apport d'Affaires", 'Développement commercial', 'Courtier en assurance'], img: `${import.meta.env.BASE_URL}evidence.png`, contain: true, bg: '#ffffff' },
