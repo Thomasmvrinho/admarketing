@@ -3,12 +3,12 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { Menu, X } from 'lucide-react'
 
 const links = [
-  { label: 'Accueil', href: '#home' },
-  { label: 'Services', href: '#services' },
-  { label: 'Réalisations', href: '#portfolio' },
-  { label: 'À propos', href: '#process' },
-  { label: 'Tarifs', href: '#pricing' },
-  { label: 'Contact', href: '#contact' },
+  { label: 'Accueil', href: '/#home' },
+  { label: 'Services', href: '/#services' },
+  { label: 'Réalisations', href: '/#portfolio' },
+  { label: 'À propos', href: '/#process' },
+  { label: 'Tarifs', href: '/#pricing' },
+  { label: 'Blog', href: '/blog' },
 ]
 
 
@@ -40,7 +40,7 @@ export default function Navbar() {
     >
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between gap-10">
 
-        <a href="#home">
+        <a href="/#home">
           <img src={`${import.meta.env.BASE_URL}logo-admarketing.png`} alt="ADMARKETING" className="h-20 w-96 object-contain" style={{ mixBlendMode: 'screen' }} />
         </a>
 
@@ -57,7 +57,7 @@ export default function Navbar() {
         </div>
 
         <motion.a
-          href="#contact"
+          href="/#contact"
           className="hidden md:block px-5 py-2.5 rounded-full font-inter font-semibold text-sm text-ink bg-gold transition-colors duration-300 hover:bg-gold-deep"
           whileHover={{ y: -1 }}
           whileTap={{ scale: 0.97 }}
@@ -102,7 +102,7 @@ export default function Navbar() {
                 </motion.a>
               ))}
               <motion.a
-                href="#contact"
+                href="/#contact"
                 className="mt-1 px-5 py-3 rounded-full font-inter font-semibold text-sm text-ink text-center bg-gold"
                 onClick={() => setOpen(false)}
                 initial={{ x: -14, opacity: 0 }}

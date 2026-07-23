@@ -2,11 +2,12 @@ import { motion } from 'framer-motion'
 import { Linkedin } from 'lucide-react'
 
 const footerLinks = [
-  { label: 'Accueil', href: '#home' },
-  { label: 'Services', href: '#services' },
-  { label: 'Réalisations', href: '#portfolio' },
-  { label: 'Tarifs', href: '#pricing' },
-  { label: 'Contact', href: '#contact' },
+  { label: 'Accueil', href: '/#home' },
+  { label: 'Services', href: '/#services' },
+  { label: 'Réalisations', href: '/#portfolio' },
+  { label: 'Blog', href: '/blog' },
+  { label: 'Tarifs', href: '/#pricing' },
+  { label: 'Contact', href: '/#contact' },
 ]
 
 export default function Footer() {
