@@ -1,31 +1,39 @@
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { ChevronDown } from 'lucide-react'
+import { ChevronDown, ArrowRight } from 'lucide-react'
 
 const faqs = [
   {
     q: "Comment fonctionne l'apport d'affaires ?",
-    a: "L'apport d'affaires consiste à mettre en relation votre entreprise avec des prospects qualifiés correspondant à votre cible. Nous utilisons notre réseau étendu et nos outils de prospection pour identifier les meilleures opportunités. Vous ne payez qu'en cas de signature effective.",
+    a: "L'apport d'affaires consiste à mettre en relation votre entreprise avec des prospects B2B qualifiés, correspondant précisément à votre cible. Nous activons notre réseau et une prospection ciblée pour identifier les bonnes opportunités, puis nous les qualifions avant de vous les transmettre. Notre rémunération combine une part fixe maîtrisée et une commission au succès : nos intérêts restent alignés sur vos résultats.",
+    link: { label: "Découvrir l'apport d'affaires", href: '/#apport-affaires' },
+  },
+  {
+    q: "Combien coûte votre accompagnement ?",
+    a: "Chaque mission étant sur-mesure, le tarif dépend de votre secteur, de votre cible et du volume souhaité. Nous fonctionnons sur devis, avec des modalités claires définies au démarrage et formalisées par écrit, sans coût caché. En apport d'affaires, la rémunération associe généralement une part fixe et une commission au succès.",
+    link: { label: "Combien coûte un apporteur d'affaires ?", href: '/blog/combien-coute-apporteur-affaires' },
   },
   {
     q: "Quels secteurs d'activité couvrez-vous ?",
-    a: "Nous intervenons dans de nombreux secteurs : immobilier, BTP, tech, services B2B, finance, retail et bien d'autres. Notre approche est adaptée à chaque secteur avec des experts dédiés qui connaissent les spécificités de votre marché.",
+    a: "Nous intervenons en B2B dans de nombreux secteurs : services aux entreprises, industrie et BTP, tech et SaaS, immobilier, finance et bien d'autres. Notre méthode s'adapte à chaque marché, en partant toujours de votre offre et de vos cibles. Votre secteur n'y figure pas ? Nous activons une prospection dédiée à votre activité.",
   },
   {
     q: "Comment sont structurées vos formations ?",
-    a: "Nos formations sont 100% sur-mesure et précédées d'un diagnostic complet de vos équipes. Elles combinent théorie, mises en situation et coaching individuel. Elles se déroulent en présentiel, en distanciel ou en format hybride selon vos besoins.",
+    a: "Nos formations sont sur-mesure et précédées d'un diagnostic de vos équipes et de vos enjeux. Elles combinent apports structurés, mises en situation concrètes et accompagnement personnalisé, en présentiel, en distanciel ou en format hybride selon vos besoins. Un suivi post-formation permet d'ancrer durablement les acquis.",
+    link: { label: "En savoir plus sur la formation commerciale", href: '/blog/formation-commerciale-entreprise' },
   },
   {
     q: "Sous quel délai peut-on voir des résultats ?",
-    a: "Les premiers résultats en apport d'affaires se constatent généralement dès le 2e mois. Pour le développement commercial, les effets structurels se manifestent entre 3 et 6 mois. Nous définissons des KPIs clairs dès le départ pour mesurer les progrès.",
+    a: "Cela dépend de votre point de départ et de votre marché. En apport d'affaires, les premières mises en relation qualifiées interviennent progressivement dès les premières semaines, le temps d'activer le réseau et de valider chaque contact. Pour le développement commercial, les effets structurels (pipeline plus lisible, process partagés, outils opérationnels) se consolident généralement sur le premier trimestre. Nous définissons des indicateurs de suivi dès le départ pour objectiver la progression.",
   },
   {
     q: "Proposez-vous des engagements sur les résultats ?",
-    a: "Nous travaillons sur la base d'objectifs définis ensemble et partageons le risque avec nos clients. Notre modèle de rémunération à la performance en apport d'affaires en est la meilleure preuve : nous ne sommes rémunérés que si vous signez.",
+    a: "Aucun prestataire sérieux ne peut garantir un résultat commercial, qui dépend aussi de votre offre et de votre marché. En revanche, nous partageons le risque : notre rémunération en apport d'affaires comprend une part au succès, nous ne gagnons donc pleinement que lorsque vous obtenez des résultats. Nous fixons ensemble des objectifs et des indicateurs pour piloter la collaboration en toute transparence.",
+    link: { label: "Le contrat d'apport d'affaires expliqué", href: '/blog/contrat-apport-affaires' },
   },
   {
     q: "Comment se passe le premier échange ?",
-    a: "Le premier échange est un appel ou une réunion gratuite et sans engagement de 30 à 45 minutes. Nous prenons le temps de comprendre votre activité, vos enjeux et vos objectifs. Nous vous soumettons ensuite une proposition adaptée sous 48 heures.",
+    a: "Le premier échange est un appel ou une réunion, gratuit et sans engagement (30 à 45 minutes). Nous prenons le temps de comprendre votre activité, vos enjeux et vos objectifs. Nous revenons ensuite vers vous rapidement avec une proposition adaptée à votre contexte.",
   },
 ]
 
@@ -61,6 +69,13 @@ export default function FAQ() {
                     <div className="px-6 pb-6">
                       <div className="w-full h-px mb-4 bg-white/10" />
                       <p className="font-inter text-white/50 text-sm leading-relaxed">{faq.a}</p>
+                      {faq.link && (
+                        <a href={faq.link.href}
+                          className="inline-flex items-center gap-1.5 mt-4 font-inter font-semibold text-sm text-gold hover:text-gold-deep transition-colors">
+                          {faq.link.label}
+                          <ArrowRight size={14} strokeWidth={2.25} />
+                        </a>
+                      )}
                     </div>
                   </motion.div>
                 )}
