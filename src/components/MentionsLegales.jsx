@@ -3,6 +3,33 @@ import { ArrowLeft } from 'lucide-react'
 
 const sections = [
   {
+    title: 'Éditeur du site',
+    content: [
+      'Le site ad-marketing.pro est édité par :',
+      '',
+      'AD MARKETING',
+      '88 Cours de la Martinique',
+      '33000 Bordeaux - France',
+      'SIREN : 102 519 725',
+      'E-mail : contact@ad-marketing.pro',
+      'Téléphone : 06 67 40 53 51',
+      '',
+      'Directeur de la publication : Adrien Lafarge',
+      'Conception et réalisation technique : Thomasmvrinho',
+    ],
+  },
+  {
+    title: 'Hébergement',
+    content: [
+      'Le site est hébergé par :',
+      '',
+      'Vercel Inc.',
+      '340 S Lemon Ave #4133',
+      'Walnut, CA 91789 - États-Unis',
+      'Site : vercel.com',
+    ],
+  },
+  {
     title: 'Responsable du traitement',
     content: [
       'Le responsable du traitement des données personnelles collectées sur le site ad-marketing.pro est :',
@@ -65,7 +92,6 @@ const sections = [
     rights: [
       "Jusqu'à 3 ans après le dernier contact pour les prospects",
       'Pendant la durée de la relation commerciale puis conformément aux obligations légales pour les clients',
-      "13 mois maximum pour certains cookies de mesure d'audience",
     ],
   },
   {
@@ -98,17 +124,22 @@ const sections = [
     content: [
       "Si vous estimez que vos droits ne sont pas respectés, vous pouvez adresser une réclamation à :",
       '',
-      'CNIL (Commission Nationale de l\'Informatique et des Libertés)',
+      "CNIL (Commission Nationale de l'Informatique et des Libertés)",
+      '3 Place de Fontenoy, TSA 80715',
+      '75334 Paris Cedex 07',
+      'Site : www.cnil.fr',
     ],
   },
   {
     title: 'Cookies',
     content: [
-      "Le site peut utiliser des cookies techniques nécessaires à son fonctionnement ainsi que des cookies de mesure d'audience et de marketing.",
+      'Le site utilise uniquement des cookies techniques strictement nécessaires à son bon fonctionnement.',
       '',
-      "Lors de votre première visite, un bandeau de gestion des cookies vous permet d'accepter, de refuser ou de personnaliser leur utilisation.",
+      "La mesure d'audience est assurée par Vercel Analytics, un outil respectueux de la vie privée qui ne dépose aucun cookie et ne collecte pas de données identifiantes ni à des fins publicitaires.",
       '',
-      'Vous pouvez modifier vos préférences à tout moment.',
+      "Aucun cookie publicitaire ou de suivi tiers n'est utilisé. En l'absence de cookies non essentiels, aucun bandeau de consentement n'est requis.",
+      '',
+      'Vous pouvez à tout moment configurer votre navigateur pour bloquer ou supprimer les cookies.',
     ],
   },
 ]
@@ -135,7 +166,7 @@ export default function MentionsLegales() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.4 }}
         >
-          Politique de{' '}
+          Mentions légales &{' '}
           <span className="text-gold">confidentialité</span>
         </motion.h1>
 
