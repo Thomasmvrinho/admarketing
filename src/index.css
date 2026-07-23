@@ -74,6 +74,16 @@
   to { transform: translateX(-50%); }
 }
 
+/* Reseau SVG du hero (fallback mobile) : rotation lente autour de son centre */
+@keyframes heroNetSpin {
+  to { transform: rotate(360deg); }
+}
+.hero-net-spin {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: heroNetSpin 55s linear infinite;
+}
+
 /* Accessibilité : respecte la préférence système de mouvement réduit */
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }

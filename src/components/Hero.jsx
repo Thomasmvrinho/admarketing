@@ -1,7 +1,10 @@
 import { motion } from 'framer-motion'
-import { lazy, Suspense } from 'react'
+import { lazy, Suspense, useState, useEffect } from 'react'
 import { Users, TrendingUp } from 'lucide-react'
+import HeroNetworkFallback from './HeroNetworkFallback'
 
+// La 3D (three.js, ~872 Ko) n'est importee que sur desktop : le rendu conditionnel
+// ci-dessous empeche le chargement du chunk sur mobile/tablette.
 const HeroNetwork3D = lazy(() => import('./HeroNetwork3D'))
 
 const words = [
@@ -16,6 +19,18 @@ const words = [
 ]
 
 export default function Hero() {
+  // Charge la 3D uniquement a partir du breakpoint desktop (lg = 1024px)
+  const [isDesktop, setIsDesktop] = useState(
+    () => typeof window !== 'undefined' && window.matchMedia('(min-width: 1024px)').matches
+  )
+  useEffect(() => {
+    const mq = window.matchMedia('(min-width: 1024px)')
+    const update = () => setIsDesktop(mq.matches)
+    update()
+    mq.addEventListener('change', update)
+    return () => mq.removeEventListener('change', update)
+  }, [])
+
   return (
     <section id="home" className="relative min-h-[100dvh] bg-ink flex items-center pt-24 pb-16 overflow-hidden">
       {/* Halo ambiant unique, tres discret, profondeur sans surbrillance */}
@@ -85,9 +100,13 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 0.4, ease: [0.22, 1, 0.36, 1] }}
         >
           <div className="relative w-full h-[360px] md:h-[440px]">
-            <Suspense fallback={null}>
-              <HeroNetwork3D />
-            </Suspense>
+            {isDesktop ? (
+              <Suspense fallback={<HeroNetworkFallback />}>
+                <HeroNetwork3D />
+              </Suspense>
+            ) : (
+              <HeroNetworkFallback />
+            )}
           </div>
 
           <motion.div
