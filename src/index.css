@@ -29,15 +29,6 @@
   :focus:not(:focus-visible) { outline: none; }
 }
 
-@layer utilities {
-  .gradient-text {
-    background: linear-gradient(135deg, #D4AF37, #E5C158);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-  }
-}
-
 ::-webkit-scrollbar { width: 8px; }
 ::-webkit-scrollbar-track { background: #0A0A0B; }
 ::-webkit-scrollbar-thumb {

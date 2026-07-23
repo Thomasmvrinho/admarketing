@@ -327,5 +327,74 @@ export const blogPosts = [
     ],
     "conclusion": "Former ses commerciaux n'est pas une dépense ponctuelle, mais un investissement structurant qui se mesure sur la durée. Une formation commerciale en entreprise réussie part d'un diagnostic précis, cible les bonnes compétences, choisit un format adapté à votre organisation et prévoit dès le départ comment ancrer les acquis. Chez ADMARKETING, nous accompagnons les dirigeants de PME et d'ETI dans cette montée en compétence, en reliant formation, développement commercial et génération de leads qualifiés pour des résultats concrets. Si vous souhaitez faire le point sur les priorités de votre équipe et construire un parcours sur mesure, n'hésitez pas à nous contacter pour échanger et obtenir un devis adapté à votre contexte.",
     "date": "2026-07-23"
+  },
+  {
+    "slug": "qu-est-ce-qu-un-lead-qualifie-b2b",
+    "title": "Qu'est-ce qu'un lead qualifié en B2B et comment en générer ?",
+    "metaTitle": "Lead qualifié B2B : définition et méthode",
+    "metaDescription": "Qu'est-ce qu'un lead qualifié en B2B ? Définition, différence MQL/SQL, critères de qualification et méthode pour générer des leads vraiment convertibles.",
+    "category": "Développement commercial",
+    "keyword": "lead qualifié",
+    "readTime": "7 min",
+    "excerpt": "Un lead qualifié n'est pas un simple contact : c'est un prospect qui correspond à votre cible et prêt à avancer. Définition, critères et méthode pour en générer.",
+    "intro": "Générer beaucoup de contacts ne sert à rien si vos commerciaux passent leurs journées à relancer des prospects qui n'achèteront jamais. C'est tout l'enjeu du lead qualifié : distinguer, dans la masse des contacts entrants, ceux qui correspondent vraiment à votre offre et sont en situation d'avancer. Pour un dirigeant de PME ou d'ETI, savoir ce qu'est un lead qualifié, comment le reconnaître et surtout comment en générer de façon régulière change complètement la rentabilité de l'effort commercial. Cet article vous donne une définition claire, distingue le lead marketing du lead commercial, détaille les critères de qualification les plus utiles en B2B et explique comment privilégier la qualité au volume sans se noyer dans des contacts stériles.",
+    "sections": [
+      {
+        "heading": "Lead, prospect, lead qualifié : de quoi parle-t-on vraiment",
+        "paragraphs": [
+          "Dans le langage commercial courant, les mots lead, contact et prospect sont souvent employés indifféremment. Pourtant, les confondre conduit à mal piloter sa prospection. Un lead, au sens strict, est un contact qui a manifesté un premier signe d'intérêt : il a rempli un formulaire, téléchargé un document, laissé sa carte sur un salon ou répondu à un message. Rien ne dit encore qu'il a un besoin réel ni les moyens d'y répondre.",
+          "Un lead qualifié, lui, a franchi une étape supplémentaire : on a vérifié qu'il correspond à votre cible et qu'il présente un potentiel concret. Autrement dit, ce n'est plus seulement quelqu'un qui a levé la main, mais quelqu'un dont on a de bonnes raisons de penser qu'il peut devenir client. C'est cette vérification qui transforme un simple nom dans un fichier en opportunité digne du temps d'un commercial.",
+          "La nuance n'est pas cosmétique. Traiter tous les leads de la même façon revient à disperser l'énergie de vos équipes sur des contacts qui n'aboutiront pas, au détriment de ceux qui comptent. La qualification est précisément ce qui permet de concentrer l'effort là où il produit des résultats."
+        ],
+        "list": []
+      },
+      {
+        "heading": "Lead marketing (MQL) et lead commercial (SQL) : ne pas les confondre",
+        "paragraphs": [
+          "En B2B, on distingue souvent deux grands niveaux de qualification, hérités du vocabulaire anglo-saxon mais très utiles à comprendre. Ils correspondent à deux moments différents du parcours d'achat et n'appellent pas les mêmes actions.",
+          "Confondre les deux est une source classique de tension entre marketing et commerciaux : les premiers reprochent aux seconds de ne pas traiter les leads, les seconds reprochent aux premiers d'envoyer des contacts qui ne sont pas prêts. Clarifier ces deux niveaux règle une bonne partie du malentendu."
+        ],
+        "list": [
+          "Le lead marketing (MQL, pour marketing qualified lead) : un contact qui correspond à votre cible et montre un intérêt, mais qui n'est pas encore prêt à parler d'un achat. Il a besoin d'être nourri d'informations et de confiance avant d'aller plus loin.",
+          "Le lead commercial (SQL, pour sales qualified lead) : un contact dont le besoin, le contexte et la maturité justifient une prise de contact commerciale directe. C'est celui que vos vendeurs doivent traiter en priorité.",
+          "Le passage de l'un à l'autre : il doit reposer sur des critères convenus entre marketing et commerce, et non sur une impression. Sans règle commune, la qualité des leads transmis reste aléatoire."
+        ]
+      },
+      {
+        "heading": "Les critères pour qualifier un lead en B2B",
+        "paragraphs": [
+          "Qualifier un lead consiste à répondre à quelques questions simples avant d'engager du temps commercial. Plusieurs grilles existent, mais elles tournent toutes autour des mêmes idées : la personne a-t-elle un besoin réel, les moyens d'y répondre, le pouvoir de décider et une échéance ?",
+          "L'important n'est pas d'appliquer une méthode rigide, mais de se poser systématiquement ces questions pour éviter de s'emballer sur un contact séduisant mais sans réel potentiel. Voici les critères les plus utiles à vérifier :"
+        ],
+        "list": [
+          "Le besoin : le prospect a-t-il un problème que votre offre résout concrètement, et en a-t-il conscience ? Un besoin flou ou inexistant ne se transforme pas en vente.",
+          "L'adéquation avec votre cible : taille d'entreprise, secteur, zone géographique, maturité. Un contact hors de votre cœur de cible coûte souvent plus qu'il ne rapporte.",
+          "Le pouvoir de décision : votre interlocuteur décide-t-il, influence-t-il ou subit-il la décision ? Identifier le vrai décideur évite des semaines de discussions sans issue.",
+          "Le budget et les moyens : le prospect a-t-il les ressources pour s'offrir votre solution ? Mieux vaut le savoir tôt que de le découvrir au moment de la proposition.",
+          "L'échéance : le projet est-il d'actualité ou repoussé à un horizon lointain ? Un besoin réel mais sans calendrier demande un suivi patient, pas une pression immédiate."
+        ]
+      },
+      {
+        "heading": "Générer des leads qualifiés plutôt que du volume",
+        "paragraphs": [
+          "Beaucoup d'entreprises mesurent leur prospection au nombre de contacts générés. C'est un piège : un gros volume de leads mal ciblés donne l'illusion d'activité tout en épuisant les commerciaux en relances inutiles. La vraie performance se mesure au nombre de leads réellement convertibles, pas au total brut.",
+          "Pour générer des leads qualifiés, tout commence par une définition précise de votre client idéal. Plus vous savez qui vous cherchez (secteur, taille, fonction, problématique), plus votre ciblage et votre message gagnent en pertinence. Un discours calibré attire les bons profils et décourage naturellement ceux qui ne correspondent pas, ce qui réalise une première qualification en amont.",
+          "Vient ensuite la qualification active : quelques échanges et quelques questions bien posées suffisent souvent à trier. L'objectif n'est pas de convaincre à tout prix, mais de vérifier honnêtement si le courant peut passer. Cette étape, parfois négligée par impatience, est celle qui protège le mieux le temps de vos équipes.",
+          "Enfin, la régularité prime sur les coups d'éclat. Un flux modeste mais constant de leads bien qualifiés vaut mieux qu'une vague ponctuelle de contacts que personne n'a le temps de traiter sérieusement. La génération de leads est un travail de fond qui se construit dans la durée."
+        ],
+        "list": []
+      },
+      {
+        "heading": "Pourquoi la qualification protège votre temps commercial",
+        "paragraphs": [
+          "Le temps d'un commercial est une ressource rare et coûteuse. Chaque heure passée à relancer un contact qui n'achètera pas est une heure retirée à ceux qui pourraient signer. La qualification n'est donc pas une formalité administrative : c'est un levier direct de rentabilité pour votre développement commercial.",
+          "Un lead correctement qualifié raccourcit aussi le cycle de vente. Quand le besoin, le budget et le décideur ont été identifiés en amont, la discussion commerciale démarre sur des bases saines et progresse plus vite. À l'inverse, un lead mal qualifié fait perdre du temps des deux côtés et se solde souvent par un abandon tardif, après beaucoup d'énergie dépensée.",
+          "C'est précisément là qu'un partenaire spécialisé dans la génération de leads B2B apporte de la valeur : en filtrant en amont, il ne transmet à vos équipes que des opportunités qui méritent leur attention. Vos commerciaux se concentrent alors sur ce qu'ils font de mieux, convaincre et conclure, plutôt que de trier des contacts."
+        ],
+        "list": []
+      }
+    ],
+    "conclusion": "Un lead qualifié n'est pas un simple contact de plus dans un fichier : c'est un prospect dont on a vérifié qu'il correspond à votre cible et présente un potentiel réel. Distinguer le lead marketing du lead commercial, s'appuyer sur des critères clairs de qualification et privilégier la qualité au volume sont les fondations d'une prospection rentable. Chez ADMARKETING, nous aidons les dirigeants de PME et d'ETI à générer des leads B2B qualifiés et à structurer leur développement commercial, pour que le temps de vos équipes soit investi sur les bonnes opportunités. Si vous souhaitez un flux régulier de contacts réellement convertibles plutôt qu'une avalanche de leads stériles, contactez-nous pour un premier échange sans engagement et un devis adapté à votre situation.",
+    "date": "2026-07-23"
   }
 ]

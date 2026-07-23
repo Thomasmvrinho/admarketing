@@ -4,6 +4,13 @@ import { ChevronLeft, ChevronRight, Star } from 'lucide-react'
 
 const testimonials = [
   {
+    name: 'Thomas Marinho',
+    role: 'Gérant, Thomasmvrinho',
+    text: "Un vrai partenaire de croissance. ADMARKETING comprend notre métier, cible juste et livre des prospects qualifiés qui se transforment en clients. Un résultat concret et une relation de confiance : je recommande les yeux fermés.",
+    initials: 'TM',
+    stars: 5,
+  },
+  {
     name: 'Thierry Moutou',
     role: 'Gérant, Radical',
     text: "Adrien Lafarge me donne entière satisfaction. Des apports d'affaires parfaitement qualifiés. Quel plaisir !",

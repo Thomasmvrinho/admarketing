@@ -1,13 +1,11 @@
 import { motion } from 'framer-motion'
-import { ExternalLink, Construction, ArrowRight } from 'lucide-react'
+import { ExternalLink, ArrowRight } from 'lucide-react'
 
 const projects = [
-  { title: 'Thomasmvrinho', tags: ['Développement commercial', 'Création de site internet'], img: `${import.meta.env.BASE_URL}projet1.png`, dev: false, link: 'https://mon-projet-omega-one.vercel.app/' },
-  { title: 'Leggett Immobilier', tags: ["Apport d'Affaires", 'Immobilier'], img: `${import.meta.env.BASE_URL}leggett.png`, dev: false, contain: true, bg: '#ffffff' },
-  { title: 'Radical', tags: ["Apport d'Affaires", 'Dératisation'], img: `${import.meta.env.BASE_URL}radical.png`, dev: false },
-  { title: 'Evidence Assurances', tags: ["Apport d'Affaires", 'Développement commercial', 'Courtier en assurance'], img: `${import.meta.env.BASE_URL}evidence.png`, dev: false, contain: true, bg: '#ffffff' },
-  { title: 'En développement', tags: [], img: null, dev: true },
-  { title: 'En développement', tags: [], img: null, dev: true },
+  { title: 'Thomasmvrinho', tags: ['Développement commercial', 'Création de site internet'], img: `${import.meta.env.BASE_URL}projet1.png`, link: 'https://mon-projet-omega-one.vercel.app/' },
+  { title: 'Leggett Immobilier', tags: ["Apport d'Affaires", 'Immobilier'], img: `${import.meta.env.BASE_URL}leggett.png`, contain: true, bg: '#ffffff' },
+  { title: 'Radical', tags: ["Apport d'Affaires", 'Dératisation'], img: `${import.meta.env.BASE_URL}radical.png` },
+  { title: 'Evidence Assurances', tags: ["Apport d'Affaires", 'Développement commercial', 'Courtier en assurance'], img: `${import.meta.env.BASE_URL}evidence.png`, contain: true, bg: '#ffffff' },
 ]
 
 export default function Portfolio() {
@@ -21,7 +19,7 @@ export default function Portfolio() {
           <h2 className="font-grotesk font-bold text-3xl md:text-4xl text-ink mb-4">Quelques-unes de nos réalisations</h2>
           <div className="mx-auto w-16 h-px bg-gold/50" />
         </motion.div>
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           {projects.map((p, i) => (
             <motion.div key={i}
               className="group relative rounded-2xl overflow-hidden flex flex-col"
@@ -29,31 +27,23 @@ export default function Portfolio() {
               viewport={{ once: true }} transition={{ duration: 0.5, delay: i * 0.09 }}
               whileHover={{ y: -5, boxShadow: '0 20px 55px rgba(0,0,0,0.3)' }}
               style={{ boxShadow: '0 2px 16px rgba(0,0,0,0.2)', border: '1px solid rgba(212,175,55,0.15)' }}>
-              {p.dev ? (
-                <div className="h-52 flex flex-col items-center justify-center bg-ink-soft"
-                  style={{ borderBottom: '1px dashed rgba(212,175,55,0.3)' }}>
-                  <Construction size={32} strokeWidth={1.75} className="text-gold mb-3" />
-                  <span className="font-grotesk font-bold text-white/60 text-sm tracking-wide">En développement</span>
-                </div>
-              ) : (
-                <div className="relative overflow-hidden h-52" style={{ background: p.bg || 'transparent' }}>
-                  <img src={p.img} alt={p.title}
-                    className={`w-full h-full transition-transform duration-500 group-hover:scale-110 ${p.contain ? `object-contain${p.noPad ? '' : ' p-6'}` : 'object-cover'}`}
-                    loading="lazy" />
-                  {p.link && (
-                    <div className="absolute inset-0 bg-ink/80 opacity-0 group-hover:opacity-100 transition-all duration-300 flex items-center justify-center">
-                      <motion.a
-                        href={p.link}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="px-5 py-2.5 rounded-full font-inter font-semibold text-sm bg-gold text-ink transition-colors duration-300 hover:bg-gold-deep flex items-center gap-2"
-                        whileHover={{ scale: 1.06 }}>
-                        <ExternalLink size={15} />Voir le cas client
-                      </motion.a>
-                    </div>
-                  )}
-                </div>
-              )}
+              <div className="relative overflow-hidden h-52" style={{ background: p.bg || 'transparent' }}>
+                <img src={p.img} alt={p.title}
+                  className={`w-full h-full transition-transform duration-500 group-hover:scale-110 ${p.contain ? `object-contain${p.noPad ? '' : ' p-6'}` : 'object-cover'}`}
+                  loading="lazy" />
+                {p.link && (
+                  <div className="absolute inset-0 bg-ink/80 opacity-0 group-hover:opacity-100 transition-all duration-300 flex items-center justify-center">
+                    <motion.a
+                      href={p.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="px-5 py-2.5 rounded-full font-inter font-semibold text-sm bg-gold text-ink transition-colors duration-300 hover:bg-gold-deep flex items-center gap-2"
+                      whileHover={{ scale: 1.06 }}>
+                      <ExternalLink size={15} />Voir le cas client
+                    </motion.a>
+                  </div>
+                )}
+              </div>
               <div className="p-5 bg-ink-soft flex-1">
                 <h3 className="font-grotesk font-bold text-white mb-3">{p.title}</h3>
                 <div className="flex flex-col gap-2 items-start">
