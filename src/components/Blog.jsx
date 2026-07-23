@@ -7,9 +7,33 @@ import { blogPosts } from '../data/blogPosts'
 
 export default function Blog() {
   useEffect(() => {
-    const prev = document.title
-    document.title = 'Blog ADMARKETING - Conseils apport d’affaires & développement commercial B2B'
-    return () => { document.title = prev }
+    const url = 'https://ad-marketing.pro/blog'
+    const title = 'Blog ADMARKETING - Conseils apport d’affaires & développement commercial B2B'
+    const desc = 'Conseils concrets et repères pour développer votre activité commerciale B2B : apport d’affaires, prospection, formation et structuration de la vente.'
+
+    const prevTitle = document.title
+    document.title = title
+
+    const setAttr = (selector, attr, value) => {
+      const el = document.querySelector(selector)
+      const prev = el ? el.getAttribute(attr) : null
+      if (el) el.setAttribute(attr, value)
+      return () => { if (el && prev !== null) el.setAttribute(attr, prev) }
+    }
+    const restores = [
+      setAttr('meta[name="description"]', 'content', desc),
+      setAttr('link[rel="canonical"]', 'href', url),
+      setAttr('meta[property="og:title"]', 'content', title),
+      setAttr('meta[property="og:description"]', 'content', desc),
+      setAttr('meta[property="og:url"]', 'content', url),
+      setAttr('meta[name="twitter:title"]', 'content', title),
+      setAttr('meta[name="twitter:description"]', 'content', desc),
+    ]
+
+    return () => {
+      document.title = prevTitle
+      restores.forEach((r) => r())
+    }
   }, [])
 
   return (

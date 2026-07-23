@@ -50,7 +50,7 @@ export default function ROICalculator() {
           </h2>
           <div className="mx-auto w-16 h-px bg-gold/40 mb-6" />
           <p className="font-inter text-white/40 text-sm max-w-lg mx-auto leading-relaxed">
-            Entrez vos chiffres actuels et découvrez le chiffre d'affaires additionnel que vous pourriez générer avec ADmarketing.
+            Entrez vos chiffres actuels et découvrez le chiffre d'affaires additionnel que vous pourriez générer avec ADMARKETING.
           </p>
         </motion.div>
 
@@ -61,10 +61,11 @@ export default function ROICalculator() {
           {/* Row 1 */}
           <div className="grid md:grid-cols-2 gap-4 mb-4">
             <div>
-              <label className="font-syne font-semibold text-[11px] uppercase tracking-[0.2em] text-gold mb-2 block">
+              <label htmlFor="roi-leads" className="font-syne font-semibold text-[11px] uppercase tracking-[0.2em] text-gold mb-2 block">
                 Leads générés / mois
               </label>
               <input
+                id="roi-leads"
                 type="number" min="0" placeholder="Ex : 50"
                 value={leads}
                 onChange={e => { setLeads(e.target.value); setResult(null) }}
@@ -75,10 +76,11 @@ export default function ROICalculator() {
               />
             </div>
             <div>
-              <label className="font-syne font-semibold text-[11px] uppercase tracking-[0.2em] text-gold mb-2 block">
+              <label htmlFor="roi-conversion" className="font-syne font-semibold text-[11px] uppercase tracking-[0.2em] text-gold mb-2 block">
                 Taux de conversion (%)
               </label>
               <input
+                id="roi-conversion"
                 type="number" min="0" max="100" placeholder="Ex : 10"
                 value={conversion}
                 onChange={e => { setConversion(e.target.value); setResult(null) }}
@@ -92,7 +94,7 @@ export default function ROICalculator() {
 
           {/* Row 2 */}
           <div className="mb-6">
-            <label className="font-syne font-semibold text-[11px] uppercase tracking-[0.2em] text-gold mb-2 flex items-center gap-2">
+            <label htmlFor="roi-marge" className="font-syne font-semibold text-[11px] uppercase tracking-[0.2em] text-gold mb-2 flex items-center gap-2">
               Marge moyenne par client (€)
               <span className="relative" onMouseEnter={() => setTooltip(true)} onMouseLeave={() => setTooltip(false)}>
                 <Info size={13} className="text-white/30 hover:text-gold transition-colors cursor-help" />
@@ -101,7 +103,7 @@ export default function ROICalculator() {
                     <motion.div
                       initial={{ opacity: 0, y: 4 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: 4 }}
                       transition={{ duration: 0.2 }}
-                      className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-3 py-2 rounded-lg z-20 whitespace-nowrap"
+                      className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-3 py-2 rounded-lg z-20 w-56 max-w-[80vw]"
                       style={{ background: '#1E1C20', border: '1px solid rgba(212,175,55,0.25)', boxShadow: '0 8px 24px rgba(0,0,0,0.5)' }}>
                       <p className="font-inter text-white/60 text-xs normal-case tracking-normal font-normal">
                         Bénéfice moyen que vous réalisez sur chaque client signé.
@@ -112,6 +114,7 @@ export default function ROICalculator() {
               </span>
             </label>
             <input
+              id="roi-marge"
               type="number" min="0" placeholder="Ex : 2 000"
               value={marge}
               onChange={e => { setMarge(e.target.value); setResult(null) }}
@@ -136,6 +139,8 @@ export default function ROICalculator() {
               type="range" min={0} max={UPLIFT_STEPS.length - 1} step={1}
               value={upliftIdx}
               onChange={e => { setUpliftIdx(Number(e.target.value)); setResult(null) }}
+              aria-label="Gain de performance commerciale visé"
+              aria-valuetext={formatUplift(uplift)}
               className="roi-slider w-full"
               style={{ '--fill': `${fillPct}%` }}
             />

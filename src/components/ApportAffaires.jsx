@@ -22,7 +22,7 @@ const stats = [
 
 const steps = [
   { n: '01', title: 'Audit & ciblage client idéal (ICP)', desc: "Nous définissons ensemble votre client idéal (ICP) et vos critères de qualification : secteur, taille, zone, signaux d'achat." },
-  { n: '02', title: 'Identification via réseau', desc: "Activation du réseau de partenaires ADmarketing et prospection ciblée pour identifier les prospects réellement pertinents pour votre offre." },
+  { n: '02', title: 'Identification via réseau', desc: "Activation du réseau de partenaires ADMARKETING et prospection ciblée pour identifier les prospects réellement pertinents pour votre offre." },
   { n: '03', title: 'Qualification BANT', desc: "Chaque lead est qualifié sur les critères BANT (budget, autorité, besoin, timing) avant de vous être transmis. Aucun contact au hasard." },
   { n: '04', title: 'Mise en relation', desc: "Transmission du contact qualifié avec son contexte complet et un brief de présentation, pour un premier échange commercial optimal." },
   { n: '05', title: 'Suivi & reporting', desc: "Reporting mensuel des leads transmis, du taux de transformation et des ajustements de ciblage pour améliorer la performance en continu." },
@@ -90,7 +90,7 @@ export default function ApportAffaires() {
           style={{ background: 'radial-gradient(ellipse 70% 50% at 60% 0%, rgba(212,175,55,0.07) 0%, transparent 70%)' }} />
         <div className="max-w-5xl mx-auto">
           <motion.a
-            onClick={goHome}
+            href="/#home"
             initial={{ opacity: 0, x: -12 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.4 }}
             className="inline-flex items-center gap-2 font-inter text-sm text-white/40 hover:text-gold transition-colors mb-10 cursor-pointer"
           >
@@ -134,7 +134,7 @@ export default function ApportAffaires() {
               En B2B, un commercial passe en moyenne <span className="text-gold font-semibold">40% de son temps</span> à prospecter, pour un taux de transformation sur leads froids de <span className="text-gold font-semibold">2 à 5%</span>. C'est du temps précieux qui n'est pas consacré à la vente.
             </p>
             <p className="font-inter text-white/55 text-sm leading-relaxed">
-              ADmarketing externalise cette phase et vous livre des leads déjà qualifiés, ce qui libère vos commerciaux pour ce qu'ils font de mieux : convaincre et conclure.
+              ADMARKETING externalise cette phase et vous livre des leads déjà qualifiés, ce qui libère vos commerciaux pour ce qu'ils font de mieux : convaincre et conclure.
             </p>
           </motion.div>
         </div>

@@ -1,4 +1,4 @@
-import { useState, useEffect, lazy, Suspense } from 'react'
+import { useState, useEffect, useRef, lazy, Suspense } from 'react'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import ScrollProgress from './components/ScrollProgress'
@@ -25,7 +25,11 @@ const Footer = lazy(() => import('./components/Footer'))
 function getRoute() {
   const path = window.location.pathname.replace(/\/+$/, '')
   if (path === '/blog') return { page: 'blog' }
-  if (path.startsWith('/blog/')) return { page: 'article', slug: decodeURIComponent(path.slice(6)) }
+  if (path.startsWith('/blog/')) {
+    let slug = path.slice(6)
+    try { slug = decodeURIComponent(slug) } catch { /* URL malformee : on garde le slug brut */ }
+    return { page: 'article', slug }
+  }
 
   const h = window.location.hash
   if (h === '#mentions-legales') return { page: 'mentions' }
@@ -35,13 +39,35 @@ function getRoute() {
   return { page: 'home' }
 }
 
+// Defile vers l'element cible du hash s'il existe. Renvoie true si trouve.
+function scrollToHash() {
+  const id = window.location.hash.slice(1)
+  if (!id) return false
+  const el = document.getElementById(id)
+  if (el) {
+    el.scrollIntoView({ behavior: 'smooth' })
+    return true
+  }
+  return false
+}
+
 export default function App() {
   const [route, setRoute] = useState(getRoute)
+  const prevPage = useRef(route.page)
 
   useEffect(() => {
     const onNav = () => {
-      setRoute(getRoute())
-      window.scrollTo(0, 0)
+      const next = getRoute()
+      const pageChanged = next.page !== prevPage.current
+      prevPage.current = next.page
+      setRoute(next)
+      if (pageChanged) {
+        // Vrai changement de page : on remonte en haut
+        window.scrollTo(0, 0)
+      } else if (window.location.hash) {
+        // Meme page, ancre de section interne : on defile vers la cible
+        scrollToHash()
+      }
     }
     window.addEventListener('hashchange', onNav)
     window.addEventListener('popstate', onNav)
@@ -49,6 +75,20 @@ export default function App() {
       window.removeEventListener('hashchange', onNav)
       window.removeEventListener('popstate', onNav)
     }
+  }, [])
+
+  // Deep-link au chargement : si l'URL pointe vers une section de l'accueil,
+  // on defile une fois la section lazy montee (petite serie de tentatives).
+  useEffect(() => {
+    if (route.page !== 'home' || !window.location.hash) return
+    if (scrollToHash()) return
+    let tries = 0
+    const t = setInterval(() => {
+      tries += 1
+      if (scrollToHash() || tries > 20) clearInterval(t)
+    }, 100)
+    return () => clearInterval(t)
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   if (route.page === 'blog') {

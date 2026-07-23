@@ -42,12 +42,16 @@ export default function Services() {
         <div className="grid md:grid-cols-3 gap-7">
           {services.map((s, i) => (
             <motion.div key={s.title}
-              className="group bg-white rounded-2xl p-8 flex flex-col border border-ink/5 shadow-soft cursor-pointer transition-all duration-300 hover:-translate-y-1.5 hover:shadow-lift hover:border-gold/30"
+              role="button"
+              tabIndex={0}
+              aria-label={`${s.title} : en savoir plus`}
+              className="group bg-white rounded-2xl p-8 flex flex-col border border-ink/5 shadow-soft cursor-pointer transition-all duration-300 hover:-translate-y-1.5 hover:shadow-lift hover:border-gold/30 focus-visible:outline focus-visible:outline-2 focus-visible:outline-gold-deep focus-visible:outline-offset-2"
               initial={{ opacity: 0, y: 32 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: i * 0.12, ease: [0.22, 1, 0.36, 1] }}
-              onClick={() => { window.location.hash = s.href }}>
+              onClick={() => { window.location.hash = s.href }}
+              onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); window.location.hash = s.href } }}>
               <div className="w-14 h-14 rounded-xl flex items-center justify-center mb-6 bg-ink transition-transform duration-300 group-hover:scale-105">
                 <s.Icon size={24} className="text-gold" strokeWidth={1.75} />
               </div>

@@ -32,7 +32,7 @@ export default function Portfolio() {
                   className={`w-full h-full transition-transform duration-500 group-hover:scale-110 ${p.contain ? `object-contain${p.noPad ? '' : ' p-6'}` : 'object-cover'}`}
                   loading="lazy" />
                 {p.link && (
-                  <div className="absolute inset-0 bg-ink/80 opacity-0 group-hover:opacity-100 transition-all duration-300 flex items-center justify-center">
+                  <div className="absolute inset-0 bg-ink/80 opacity-0 group-hover:opacity-100 group-focus-within:opacity-100 transition-all duration-300 flex items-center justify-center">
                     <motion.a
                       href={p.link}
                       target="_blank"

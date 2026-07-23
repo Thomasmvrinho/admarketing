@@ -40,8 +40,8 @@ export default function Navbar() {
     >
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between gap-10">
 
-        <a href="/#home">
-          <img src={`${import.meta.env.BASE_URL}logo-admarketing.png`} alt="ADMARKETING" className="h-20 w-96 object-contain" style={{ mixBlendMode: 'screen' }} />
+        <a href="/#home" aria-label="ADMARKETING, accueil">
+          <img src={`${import.meta.env.BASE_URL}logo-admarketing.svg`} alt="ADMARKETING" className="h-14 w-auto lg:h-16 object-contain" />
         </a>
 
         <div className="hidden md:flex items-center gap-7">
@@ -67,8 +67,10 @@ export default function Navbar() {
 
         <button
           onClick={() => setOpen(!open)}
-          className="md:hidden p-2 text-white"
+          className="md:hidden p-3 text-white"
           aria-label="Menu"
+          aria-expanded={open}
+          aria-controls="mobile-menu"
         >
           <motion.div animate={{ rotate: open ? 90 : 0 }} transition={{ duration: 0.2 }}>
             {open ? <X size={22} /> : <Menu size={22} />}
@@ -80,19 +82,20 @@ export default function Navbar() {
         {open && (
           <motion.div
             key="menu"
+            id="mobile-menu"
             initial={{ opacity: 0, y: -8 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -8 }}
             transition={{ duration: 0.25 }}
-            className="md:hidden absolute inset-x-0 top-full border-t border-b"
+            className="md:hidden absolute inset-x-0 top-full border-t border-b max-h-[calc(100dvh-4rem)] overflow-y-auto"
             style={{ background: '#141316', borderColor: 'rgba(212,175,55,0.2)' }}
           >
-            <div className="px-6 py-6 flex flex-col gap-5">
+            <div className="px-6 py-4 flex flex-col gap-1">
               {links.map((l, i) => (
                 <motion.a
                   key={l.label}
                   href={l.href}
-                  className="font-inter text-white font-medium hover:text-gold transition-colors"
+                  className="block py-2.5 font-inter text-white font-medium hover:text-gold transition-colors"
                   onClick={() => setOpen(false)}
                   initial={{ x: -14, opacity: 0 }}
                   animate={{ x: 0, opacity: 1 }}
@@ -103,7 +106,7 @@ export default function Navbar() {
               ))}
               <motion.a
                 href="/#contact"
-                className="mt-1 px-5 py-3 rounded-full font-inter font-semibold text-sm text-ink text-center bg-gold"
+                className="mt-2 px-5 py-3 rounded-full font-inter font-semibold text-sm text-ink text-center bg-gold"
                 onClick={() => setOpen(false)}
                 initial={{ x: -14, opacity: 0 }}
                 animate={{ x: 0, opacity: 1 }}

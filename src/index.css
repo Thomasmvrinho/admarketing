@@ -68,6 +68,8 @@
   background: #D4AF37;
   cursor: pointer;
 }
+.roi-slider:focus-visible::-webkit-slider-thumb { box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.55); }
+.roi-slider:focus-visible::-moz-range-thumb { box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.55); }
 
 @keyframes marquee {
   from { transform: translateX(0); }
@@ -92,6 +94,11 @@
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
   }
+}
+
+/* Evite le zoom automatique iOS au focus : police >= 16px sur mobile */
+@media (max-width: 640px) {
+  input, select, textarea { font-size: 16px; }
 }
 
 @media (max-width: 768px) {

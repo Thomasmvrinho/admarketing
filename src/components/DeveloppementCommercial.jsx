@@ -38,7 +38,7 @@ const pourQui = [
 const livrables = [
   { title: "Rapport d'audit commercial", desc: "Diagnostic complet de votre situation actuelle avec identification des axes prioritaires." },
   { title: "Stratégie de mise sur le marché", desc: "Cible, canaux, proposition de valeur et feuille de route 12 mois adaptés à votre marché." },
-  { title: "Guide de vente", desc: "Scripts, modèles d'emails, réponses aux objections - tout ce qu'il faut pour vendre." },
+  { title: "Guide de vente", desc: "Scripts, modèles d'e-mails, réponses aux objections - tout ce qu'il faut pour vendre." },
   { title: "CRM configuré", desc: "Outil opérationnel dès le premier jour, paramétré selon vos process et vos étapes de vente." },
   { title: "Tableau de bord d'indicateurs sur-mesure", desc: "Indicateurs de performance personnalisés avec revues régulières pour piloter la croissance." },
   { title: "Accompagnement terrain", desc: "Suivi hebdomadaire au démarrage pour ancrer les nouvelles pratiques dans la durée." },
@@ -115,7 +115,7 @@ export default function DeveloppementCommercial() {
           style={{ background: 'radial-gradient(ellipse 70% 50% at 60% 0%, rgba(212,175,55,0.07) 0%, transparent 70%)' }} />
         <div className="max-w-5xl mx-auto">
           <motion.a
-            onClick={goHome}
+            href="/#home"
             initial={{ opacity: 0, x: -12 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.4 }}
             className="inline-flex items-center gap-2 font-inter text-sm text-white/40 hover:text-gold transition-colors mb-10 cursor-pointer">
             <ArrowLeft size={15} /> Retour
@@ -126,7 +126,7 @@ export default function DeveloppementCommercial() {
               Développement <span className="text-gold">commercial</span>
             </h1>
             <p className="font-inter text-white/50 text-lg max-w-2xl leading-relaxed mb-10">
-              Nous co-construisons et déployons votre stratégie commerciale de A à Z. De l'audit initial au pilotage des KPIs, ADmarketing devient votre partenaire de croissance sur-mesure.
+              Nous co-construisons et déployons votre stratégie commerciale de A à Z. De l'audit initial au pilotage des KPI, ADMARKETING devient votre partenaire de croissance sur-mesure.
             </p>
             <motion.button
               onClick={goContact}

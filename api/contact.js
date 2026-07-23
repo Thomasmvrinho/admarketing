@@ -101,7 +101,7 @@ export default async function handler(req, res) {
       from: FROM,
       to: OWNER_EMAIL,
       replyTo: d.email,
-      subject: `Nouveau devis — ${d.service || 'Demande'} | ${d.name}`,
+      subject: `Nouveau devis : ${(d.service || 'Demande').replace(/[\r\n]+/g, ' ')} | ${d.name.replace(/[\r\n]+/g, ' ')}`,
       html: buildNotifHtml(d),
     })
     if (notifErr) throw new Error(`Resend notif: ${notifErr.message}`)

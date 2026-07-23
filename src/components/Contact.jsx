@@ -137,7 +137,7 @@ export default function Contact() {
                   <Send size={17} />
                   {loading ? 'Envoi en cours...' : 'Demander mon devis'}
                 </motion.button>
-                <p className="sm:col-span-2 font-inter text-white/30 text-xs text-center leading-relaxed">
+                <p className="sm:col-span-2 font-inter text-white/50 text-xs text-center leading-relaxed">
                   Vos informations sont utilisées uniquement pour traiter votre demande et ne sont jamais cédées à des tiers. Conformément au RGPD, vous disposez d'un droit d'accès, de rectification et de suppression de vos données en écrivant à contact@ad-marketing.pro. En savoir plus dans nos{' '}
                   <a href="#mentions-legales" className="text-white/50 underline underline-offset-2 hover:text-gold transition-colors">mentions légales</a>.
                 </p>
@@ -172,9 +172,10 @@ export default function Contact() {
               <div className="font-syne font-semibold text-white/40 text-[11px] uppercase tracking-widest mb-4">Réseaux sociaux</div>
               <div className="flex gap-3">
                 <motion.a href="https://www.linkedin.com/in/adrien-lafarge-91585b319/"
-                    className="w-11 h-11 rounded-xl flex items-center justify-center text-white/40 hover:text-gold transition-colors"
+                    target="_blank" rel="noopener noreferrer"
+                    className="w-11 h-11 rounded-xl flex items-center justify-center text-white/55 hover:text-gold transition-colors"
                     style={{ border: '1px solid rgba(212,175,55,0.15)' }}
-                    whileHover={{ scale: 1.1, y: -2 }} aria-label="LinkedIn">
+                    whileHover={{ scale: 1.1, y: -2 }} aria-label="LinkedIn (nouvel onglet)">
                     <Linkedin size={19} />
                   </motion.a>
               </div>

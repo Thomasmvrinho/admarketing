@@ -19,7 +19,7 @@ const audience = [
 ]
 
 const modules = [
-  { n: '01', title: 'Prospection multicanale', desc: 'LinkedIn, email, téléphone, événements : maîtrisez chaque canal et créez votre séquence optimale.' },
+  { n: '01', title: 'Prospection multicanale', desc: 'LinkedIn, e-mail, téléphone, événements : maîtrisez chaque canal et créez votre séquence optimale.' },
   { n: '02', title: 'Positionnement', desc: 'Formuler une proposition de valeur percutante et différenciante en moins de 60 secondes.' },
   { n: '03', title: 'Gestion des objections', desc: 'Anticiper, comprendre et retourner les objections les plus fréquentes de votre secteur.' },
   { n: '04', title: 'Techniques de conclusion', desc: '5 techniques de conclusion modernes et éthiques pour accélérer la prise de décision.' },
@@ -87,7 +87,7 @@ export default function FormationCommerciale() {
           style={{ background: 'radial-gradient(ellipse 70% 50% at 60% 0%, rgba(212,175,55,0.07) 0%, transparent 70%)' }} />
         <div className="max-w-5xl mx-auto">
           <motion.a
-            onClick={goHome}
+            href="/#home"
             initial={{ opacity: 0, x: -12 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.4 }}
             className="inline-flex items-center gap-2 font-inter text-sm text-white/40 hover:text-gold transition-colors mb-10 cursor-pointer">
             <ArrowLeft size={15} /> Retour

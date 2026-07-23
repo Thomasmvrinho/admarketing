@@ -93,7 +93,7 @@ export const blogPosts = [
         ]
       },
       {
-        "heading": "Combien coute la prospection externalisee : les principaux modeles",
+        "heading": "Combien coûte la prospection externalisée : les principaux modèles",
         "paragraphs": [
           "Le coût varie fortement selon le modèle choisi, le secteur, la difficulté de la cible et le niveau de qualification attendu. Il est donc plus utile de comprendre la logique de chaque modèle que de chercher un prix unique, qui n'aurait pas grand sens.",
           "On rencontre généralement trois grandes approches sur le marché :",
@@ -106,7 +106,7 @@ export const blogPosts = [
         ]
       },
       {
-        "heading": "Comment choisir un prestataire serieux et eviter les erreurs",
+        "heading": "Comment choisir un prestataire sérieux et éviter les erreurs",
         "paragraphs": [
           "Tous les acteurs ne se valent pas, et le marché compte autant d'experts rigoureux que de promesses en l'air. Quelques signaux permettent de distinguer un partenaire fiable d'un simple vendeur de volume.",
           "Un prestataire sérieux cherche d'abord à comprendre votre cible, votre proposition de valeur et votre cycle de vente avant de parler chiffres. Il vous parle de qualification et de méthode, pas seulement de quantité de contacts. Il accepte une phase de cadrage, se montre transparent sur ses moyens et vous propose un reporting régulier et lisible.",
@@ -161,7 +161,7 @@ export const blogPosts = [
       {
         "heading": "Commission et rémunération : les mécanismes à comprendre",
         "paragraphs": [
-          "La commission est le coeur du contrat d'apport d'affaires. Elle est en général proportionnelle au chiffre d'affaires effectivement réalisé grâce à la mise en relation, ce qui aligne les intérêts des deux parties : l'apporteur est récompensé uniquement s'il génère de la valeur réelle.",
+          "La commission est le cœur du contrat d'apport d'affaires. Elle est en général proportionnelle au chiffre d'affaires effectivement réalisé grâce à la mise en relation, ce qui aligne les intérêts des deux parties : l'apporteur est récompensé uniquement s'il génère de la valeur réelle.",
           "Plusieurs paramètres méritent d'être clarifiés au moment de la négociation. La durée pendant laquelle la commission reste due sur un client apporté est essentielle : est-elle versée seulement sur la première commande, ou aussi sur les commandes récurrentes du même client pendant une période donnée ? Le sort des affaires en cours au moment de la fin du contrat doit également être anticipé, afin d'éviter les contestations sur des dossiers signés tardivement.",
           "Sur le plan pratique, prévoyez aussi les modalités de facturation, les justificatifs à fournir et le délai de paiement. Un mécanisme de commission clair, écrit noir sur blanc, est le meilleur moyen d'entretenir une relation de confiance dans la durée."
         ],

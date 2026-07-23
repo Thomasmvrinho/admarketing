@@ -74,9 +74,11 @@ export default function Testimonials() {
               <div className="flex items-center gap-2">
                 {testimonials.map((_, j) => (
                   <button key={j} onClick={() => setCurrent(j)}
-                    className="rounded-full transition-all duration-300"
-                    style={{ width: j === current ? 26 : 8, height: 8, background: j === current ? '#D4AF37' : 'rgba(255,255,255,0.18)' }}
-                    aria-label={`Témoignage ${j + 1}`} />
+                    className="h-11 flex items-center justify-center px-1.5"
+                    aria-label={`Témoignage ${j + 1}`}>
+                    <span className="block rounded-full transition-all duration-300"
+                      style={{ width: j === current ? 26 : 8, height: 8, background: j === current ? '#D4AF37' : 'rgba(255,255,255,0.18)' }} />
+                  </button>
                 ))}
               </div>
               <motion.button onClick={next}

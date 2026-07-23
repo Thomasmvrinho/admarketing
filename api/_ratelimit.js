@@ -5,9 +5,18 @@
 // (fail-open) et log la raison, pour ne jamais casser le site.
 
 export function clientIp(req) {
+  // x-real-ip est positionne par Vercel (frontiere de confiance) avec la vraie IP client :
+  // on l'utilise en priorite. Le premier element de x-forwarded-for est fourni par le client
+  // et donc falsifiable (il suffirait de le faire tourner pour contourner le quota), on ne s'y fie pas.
+  const real = req.headers['x-real-ip']
+  if (typeof real === 'string' && real.trim()) return real.trim()
   const xff = req.headers['x-forwarded-for']
-  if (typeof xff === 'string' && xff.length) return xff.split(',')[0].trim()
-  return req.headers['x-real-ip'] || 'unknown'
+  if (typeof xff === 'string' && xff.length) {
+    const parts = xff.split(',').map((s) => s.trim()).filter(Boolean)
+    // A defaut, la derniere entree est celle ajoutee par le proxy de confiance.
+    if (parts.length) return parts[parts.length - 1]
+  }
+  return 'unknown'
 }
 
 // Renvoie { ok: true } si la requête est autorisée, { ok: false } si le quota est dépassé.

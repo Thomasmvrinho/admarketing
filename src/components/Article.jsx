@@ -23,13 +23,21 @@ export default function Article({ slug }) {
     const prevTitle = document.title
     document.title = post.metaTitle
 
-    const descEl = document.querySelector('meta[name="description"]')
-    const prevDesc = descEl ? descEl.getAttribute('content') : null
-    if (descEl) descEl.setAttribute('content', post.metaDescription)
-
-    const canonEl = document.querySelector('link[rel="canonical"]')
-    const prevCanon = canonEl ? canonEl.getAttribute('href') : null
-    if (canonEl) canonEl.setAttribute('href', url)
+    const setAttr = (selector, attr, value) => {
+      const el = document.querySelector(selector)
+      const prev = el ? el.getAttribute(attr) : null
+      if (el) el.setAttribute(attr, value)
+      return () => { if (el && prev !== null) el.setAttribute(attr, prev) }
+    }
+    const restores = [
+      setAttr('meta[name="description"]', 'content', post.metaDescription),
+      setAttr('link[rel="canonical"]', 'href', url),
+      setAttr('meta[property="og:title"]', 'content', post.metaTitle),
+      setAttr('meta[property="og:description"]', 'content', post.metaDescription),
+      setAttr('meta[property="og:url"]', 'content', url),
+      setAttr('meta[name="twitter:title"]', 'content', post.metaTitle),
+      setAttr('meta[name="twitter:description"]', 'content', post.metaDescription),
+    ]
 
     const ld = document.createElement('script')
     ld.type = 'application/ld+json'
@@ -54,8 +62,7 @@ export default function Article({ slug }) {
 
     return () => {
       document.title = prevTitle
-      if (descEl && prevDesc !== null) descEl.setAttribute('content', prevDesc)
-      if (canonEl && prevCanon !== null) canonEl.setAttribute('href', prevCanon)
+      restores.forEach((r) => r())
       ld.remove()
     }
   }, [post])
