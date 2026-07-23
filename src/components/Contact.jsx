@@ -137,8 +137,9 @@ export default function Contact() {
                   <Send size={17} />
                   {loading ? 'Envoi en cours...' : 'Demander mon devis'}
                 </motion.button>
-                <p className="sm:col-span-2 font-inter text-white/30 text-xs text-center">
-                  Vos informations sont utilisées uniquement pour traiter votre demande.
+                <p className="sm:col-span-2 font-inter text-white/30 text-xs text-center leading-relaxed">
+                  Vos informations sont utilisées uniquement pour traiter votre demande et ne sont jamais cédées à des tiers. Conformément au RGPD, vous disposez d'un droit d'accès, de rectification et de suppression de vos données en écrivant à contact@ad-marketing.pro. En savoir plus dans nos{' '}
+                  <a href="#mentions-legales" className="text-white/50 underline underline-offset-2 hover:text-gold transition-colors">mentions légales</a>.
                 </p>
               </form>
             )}
